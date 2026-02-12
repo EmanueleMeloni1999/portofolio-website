@@ -356,12 +356,12 @@ section h2 {
 }
 
 .hero.scrolled {
-    filter: blur(8px);
+    filter: blur(2px);
 }
 
 .hero.scrolled::before,
 .hero.scrolled::after {
-    opacity: 0;
+    opacity: 0.05;
 }
 
 .hero::before,
@@ -417,7 +417,7 @@ section h2 {
 }
 
 .hero.scrolled .hero-overlay {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.95) 100%);
+    background: rgba(0, 0, 0, 0.75);
 }
 
 .hero-content {
