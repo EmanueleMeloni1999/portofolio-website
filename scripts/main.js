@@ -1,5 +1,43 @@
 document.addEventListener("DOMContentLoaded", function() {
-    
+
+    // ========================================
+    // INTRO ANIMATION
+    // ========================================
+    const introScreen = document.getElementById('intro-screen');
+    const introImg = document.getElementById('intro-animation');
+
+    if (introScreen && introImg) {
+        let currentFrame = 0;
+        const totalFrames = 120; // thumb_reel000 to thumb_reel119
+        const fps = 30; // 30 frames per second
+        const frameInterval = 1000 / fps; // milliseconds per frame
+
+        // Preload frames for smoother playback
+        const frames = [];
+        for (let i = 0; i < totalFrames; i++) {
+            const img = new Image();
+            img.src = `assets/sprites/thumb_animated/thumb_reel${String(i).padStart(3, '0')}.png`;
+            frames.push(img);
+        }
+
+        // Play animation
+        const animationInterval = setInterval(() => {
+            currentFrame++;
+            if (currentFrame < totalFrames) {
+                introImg.src = frames[currentFrame].src;
+            } else {
+                // Animation complete - fade out
+                clearInterval(animationInterval);
+                setTimeout(() => {
+                    introScreen.classList.add('fade-out');
+                    setTimeout(() => {
+                        introScreen.style.display = 'none';
+                    }, 800); // Match CSS transition duration
+                }, 300); // Small delay before fade
+            }
+        }, frameInterval);
+    }
+
     // ========================================
     // MOBILE MENU TOGGLE
     // ========================================

@@ -54,6 +54,56 @@ a {
 }
 
 /* =====================================================
+   INTRO SCREEN
+===================================================== */
+
+.intro-screen {
+    position: fixed;
+    inset: 0;
+    background: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+.intro-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.intro-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-content img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+@media (min-width: 768px) {
+    .intro-content {
+        max-width: 70vw;
+        max-height: 70vh;
+    }
+}
+
+@media (min-width: 1024px) {
+    .intro-content {
+        max-width: 60vw;
+        max-height: 80vh;
+    }
+}
+
+
+/* =====================================================
    GLOBAL SECTION STRUCTURE
 ===================================================== */
 
