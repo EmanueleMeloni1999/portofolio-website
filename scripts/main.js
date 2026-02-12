@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const introImg = document.getElementById('intro-animation');
 
     if (introScreen && introImg) {
+        // Block scrolling during intro
+        document.body.classList.add('intro-active');
+
         let currentFrame = 0;
         const totalFrames = 120; // thumb_reel000 to thumb_reel119
         const fps = 30; // 30 frames per second
@@ -32,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     introScreen.classList.add('fade-out');
                     setTimeout(() => {
                         introScreen.style.display = 'none';
+                        // Re-enable scrolling after intro
+                        document.body.classList.remove('intro-active');
                     }, 800); // Match CSS transition duration
                 }, 300); // Small delay before fade
             }
