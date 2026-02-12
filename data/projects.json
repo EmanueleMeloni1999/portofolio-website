@@ -14,7 +14,7 @@
         "role": "Technical Animator",
         "studio": "Al-one s.r.l",
         "image": "assets/images/projects/Poster_Trash.webp",
-        "video": false,
+        "video": "assets/videos/Trash.mp4",
         "description": "Maya/Unreal Rigging and Cinematic Integration for gameplay",
         "status": "In Production",
         "link": "https://www.youtube.com/watch?v=3jeKiYQX48c&t=39s"
