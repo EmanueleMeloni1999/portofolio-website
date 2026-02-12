@@ -69,7 +69,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
 
                 card.innerHTML = `
-                    <img src="${project.image}" alt="${project.title}" loading="lazy">
+                    <div class="project-image">
+                        <img src="${project.image}" alt="${project.title}" loading="lazy">
+                    </div>
                     <div class="project-info">
                         <h3>${project.title}</h3>
                         <p class="role-description">
