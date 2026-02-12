@@ -710,13 +710,6 @@ section h2 {
     }
 }
 
-@media (min-width: 1024px) {
-    .career-grid,
-    .teaching-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
-}
-
 /* Personal Work Grid */
 .personal-work-grid {
     grid-template-columns: 1fr;
@@ -886,6 +879,10 @@ section h2 {
         transform: translateY(-6px);
         box-shadow: 0 12px 30px rgba(0,0,0,0.4);
     }
+
+    .career-card:hover img {
+        transform: scale(1.1);
+    }
 }
 
 .career-card h3,
@@ -894,7 +891,25 @@ section h2 {
     margin: 0.8rem 0 0.4rem;
 }
 
-.career-card span,
+.career-card .career-role {
+    display: block;
+    font-size: clamp(0.8rem, 1.5vw, 0.85rem);
+    color: var(--accent-soft);
+    margin-top: 0.3rem;
+    font-weight: 600;
+}
+
+.career-card .career-period {
+    display: inline-block;
+    font-size: clamp(0.75rem, 1.5vw, 0.8rem);
+    color: var(--text-muted);
+    margin-top: 0.6rem;
+    padding: 0.4rem 0.9rem;
+    background: rgba(194, 163, 107, 0.1);
+    border: 1px solid rgba(194, 163, 107, 0.2);
+    border-radius: 50px;
+}
+
 .teaching-card span {
     display: block;
     font-size: clamp(0.8rem, 1.5vw, 0.85rem);
@@ -907,6 +922,7 @@ section h2 {
     max-height: 80px;
     margin: 0 auto;
     object-fit: contain;
+    transition: transform 0.4s ease;
 }
 
 /* =====================================================

@@ -112,8 +112,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 card.innerHTML = `
                     ${c.logo ? `<img src="${c.logo}" alt="${c.studio}" loading="lazy">` : ''}
                     <h3>${c.studio}</h3>
-                    <span>${c.role}</span>
-                    <span>${c.period}</span>
+                    <span class="career-role">${c.role}</span>
+                    <span class="career-period">${c.period}</span>
                 `;
 
                 if (c.link) {
