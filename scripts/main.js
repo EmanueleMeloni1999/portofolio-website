@@ -328,6 +328,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // ========================================
     let lastScroll = 0;
     const heroSection = document.querySelector('.hero');
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    const aboutSection = document.getElementById('about');
 
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
@@ -349,7 +351,29 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
+        // Scroll to top button visibility
+        if (scrollToTopBtn && aboutSection) {
+            const aboutTop = aboutSection.offsetTop;
+            if (currentScroll >= aboutTop) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        }
+
         lastScroll = currentScroll;
     });
+
+    // ========================================
+    // SCROLL TO TOP BUTTON CLICK
+    // ========================================
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 
 });
