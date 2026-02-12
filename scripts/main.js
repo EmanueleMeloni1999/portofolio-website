@@ -324,19 +324,31 @@ document.addEventListener("DOMContentLoaded", function() {
     
     
     // ========================================
-    // HEADER BACKGROUND ON SCROLL
+    // HEADER BACKGROUND AND HERO BLUR ON SCROLL
     // ========================================
     let lastScroll = 0;
+    const heroSection = document.querySelector('.hero');
+
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
         const siteHeader = document.querySelector('.site-header');
-        
+
+        // Header background change
         if (currentScroll > 100) {
             siteHeader.style.background = 'rgba(15, 15, 15, 0.98)';
         } else {
             siteHeader.style.background = 'rgba(15, 15, 15, 0.95)';
         }
-        
+
+        // Hero blur effect
+        if (heroSection) {
+            if (currentScroll > 200) {
+                heroSection.classList.add('scrolled');
+            } else {
+                heroSection.classList.remove('scrolled');
+            }
+        }
+
         lastScroll = currentScroll;
     });
 
