@@ -4,7 +4,7 @@
         "role": "Rigging TD - Pipeline TD",
         "studio": "Al-one s.r.l",
         "image": "assets/images/projects/Poster_Forest.webp",
-        "description": "Brief description of the project",
+        "description": "Rigged main characters; developed full-pipeline workflows and tools for all departments",
         "status": "In Production",
         "link": "https://www.instagram.com/reel/CzySygpoQHk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     },
@@ -13,7 +13,7 @@
         "role": "Technical Animator",
         "studio": "Al-one s.r.l",
         "image": "assets/images/projects/Poster_Trash.webp",
-        "description": "Brief description of the project",
+        "description": "Maya/Unreal Rigging and Cinematic Integration for gameplay",
         "status": "In Production",
         "link": "https://www.youtube.com/watch?v=3jeKiYQX48c&t=39s"
     },
@@ -22,7 +22,7 @@
         "role": "Rigging Lead",
         "studio": "Moonshot CGI",
         "image": "assets/images/projects/Poster_PrimitiveWar.webp",
-        "description": "Brief description of the project",
+        "description": "Lead Rigger supervising Creatures (Dinosaurs) and Vehicles",
         "status": "Released",
         "link": "https://www.youtube.com/watch?v=ixXxdWY6d68"
     },
@@ -31,7 +31,7 @@
         "role": "Rigging TD",
         "studio": "Insomniac",
         "image": "assets/images/projects/Poster_Unity.webp",
-        "description": "Brief description of the project",
+        "description": "Creature rigging and engine implementation tools for the Las Vegas Sphere",
         "status": "Released",
         "link": "https://www.youtube.com/watch?v=bjRhpwe_LCU"
     },
@@ -40,8 +40,8 @@
         "role": "Rigging TD",
         "studio": "Arx Anima",
         "image": "assets/images/projects/Poster_MissionGranny.webp",
-        "description": "Brief description of the project",
-        "status": "Released",
+        "description": "Character and Prop rigging for a commercial trailer",
+        "status": "In Production",
         "link": "https://arxanima.com/features-and-series/op-oma"
     },
     {
@@ -49,7 +49,7 @@
         "role": "Rigging TD",
         "studio": "Rainbow CGI",
         "image": "assets/images/projects/Poster_MermaidMagic.webp",
-        "description": "Brief description of the project",
+        "description": "Character and Prop rigging for a Netflix animated series",
         "status": "Released",
         "link": "https://www.youtube.com/watch?v=M0vGYWCRAO4"
     },
@@ -58,7 +58,7 @@
         "role": "Rigging TD",
         "studio": "Rainbow CGI",
         "image": "assets/images/projects/Poster_Superkitties.webp",
-        "description": "Brief description of the project",
+        "description": "Prop rigging for a Disney Junior animated series",
         "status": "Released",
         "link": "https://www.youtube.com/watch?v=E7txCmn44dI"
     },
@@ -67,7 +67,7 @@
         "role": "Rigging TD",
         "studio": "Rainbow CGI",
         "image": "assets/images/projects/Poster_PupStruction.webp",
-        "description": "Brief description of the project",
+        "description": "Prop rigging for a Disney Junior animated series",
         "status": "Released",
         "link": "https://www.youtube.com/watch?v=TMdSBC6vVo0"
     }
