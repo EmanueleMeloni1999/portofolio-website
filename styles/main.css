@@ -1210,6 +1210,31 @@ section h2 {
 
 
 /* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+    background: var(--bg-light);
+    border-top: 1px solid var(--border);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.site-footer p {
+    font-size: clamp(0.8rem, 1.5vw, 0.85rem);
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+}
+
+@media (min-width: 768px) {
+    .site-footer {
+        padding: 2.5rem;
+    }
+}
+
+
+/* =====================================================
    SMOOTH SCROLLING OFFSET (for fixed header)
 ===================================================== */
 
