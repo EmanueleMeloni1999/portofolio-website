@@ -114,6 +114,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 card.innerHTML = `
                     <div class="project-image">
                         <img src="${project.image}" alt="${project.title}" loading="lazy">
+                        ${project.video ? `
+                            <video class="project-video" muted loop playsinline preload="none">
+                                <source src="${project.video}" type="video/mp4">
+                            </video>
+                        ` : ''}
                     </div>
                     <div class="project-info">
                         <h3>${project.title}</h3>
@@ -126,6 +131,20 @@ document.addEventListener("DOMContentLoaded", function() {
                         </div>
                     </div>
                 `;
+
+                // Video hover controls
+                if (project.video) {
+                    const videoElement = card.querySelector('.project-video');
+                    if (videoElement) {
+                        card.addEventListener('mouseenter', () => {
+                            videoElement.play().catch(err => console.log('Video play failed:', err));
+                        });
+                        card.addEventListener('mouseleave', () => {
+                            videoElement.pause();
+                            videoElement.currentTime = 0;
+                        });
+                    }
+                }
 
                 if (project.link) {
                     card.style.cursor = 'pointer';

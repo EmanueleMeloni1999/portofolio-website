@@ -848,6 +848,7 @@ section h2 {
     inset: 0;
     background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.6) 100%);
     pointer-events: none;
+    z-index: 2;
 }
 
 .project-card img {
@@ -855,6 +856,24 @@ section h2 {
     object-fit: cover;
     width: 100%;
     display: block;
+}
+
+.project-card .project-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+@media (hover: hover) {
+    .project-card:hover .project-video {
+        opacity: 1;
+    }
 }
 
 .project-info {
