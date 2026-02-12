@@ -337,24 +337,27 @@ section h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 1620px;
-    height: auto;
+    width: auto;
+    height: 100%;
+    min-height: 600px;
     pointer-events: none;
     z-index: 0;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 @media (max-width: 767px) {
     .hero-tiger {
         width: 120%;
-        max-width: none;
+        height: auto;
+        min-height: unset;
+        object-fit: contain;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .hero-tiger {
-        width: 110%;
+        width: auto;
+        height: 100%;
     }
 }
 
