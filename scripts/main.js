@@ -113,7 +113,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     ${c.logo ? `<img src="${c.logo}" alt="${c.studio}" loading="lazy">` : ''}
                     <h3>${c.studio}</h3>
                     <span class="career-role">${c.role}</span>
-                    <span class="career-period">${c.period}</span>
+                    <div class="career-info-container">
+                        <span class="career-period">${c.period}</span>
+                        ${c.kind ? `<span class="career-kind">${c.kind}</span>` : ''}
+                    </div>
                 `;
 
                 if (c.link) {
@@ -144,10 +147,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 card.innerHTML = `
                     ${t.image ? `<img src="${t.image}" alt="${t.title}" loading="lazy">` : ''}
-                    <div class="teaching-info">
-                        <h3>${t.title}</h3>
-                        <span>${t.period}</span>
-                        ${t.location ? `<span>${t.location}</span>` : ''}
+                    <h3>${t.title}</h3>
+                    ${t.role ? `<span class="teaching-role">${t.role}</span>` : ''}
+                    <div class="teaching-info-container">
+                        <span class="teaching-period">${t.period}</span>
+                        ${t.location ? `<span class="teaching-location">${t.location}</span>` : ''}
                     </div>
                 `;
 

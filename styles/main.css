@@ -811,6 +811,10 @@ section h2 {
     flex: 1;
 }
 
+.role-description strong {
+    color: var(--accent);
+}
+
 .studio-status {
     margin-top: auto;
     display: flex;
@@ -879,10 +883,6 @@ section h2 {
         transform: translateY(-6px);
         box-shadow: 0 12px 30px rgba(0,0,0,0.4);
     }
-
-    .career-card:hover img {
-        transform: scale(1.1);
-    }
 }
 
 .career-card h3,
@@ -900,22 +900,46 @@ section h2 {
     font-weight: 600;
 }
 
-.career-card .career-period {
+.career-card .career-info-container,
+.teaching-card .teaching-info-container {
     display: inline-block;
     font-size: clamp(0.75rem, 1.5vw, 0.8rem);
     color: var(--text-muted);
     margin-top: 0;
-    padding: 0.4rem 0.9rem;
+    padding: 0.5rem 1rem;
     background: rgba(194, 163, 107, 0.1);
     border: 1px solid rgba(194, 163, 107, 0.2);
     border-radius: 50px;
+    text-align: center;
 }
 
-.teaching-card span {
+.career-card .career-period,
+.career-card .career-kind,
+.teaching-card .teaching-period,
+.teaching-card .teaching-location {
+    display: block;
+    line-height: 1.5;
+}
+
+.career-card .career-kind {
+    margin-top: 0.2rem;
+    font-size: clamp(0.7rem, 1.5vw, 0.75rem);
+    opacity: 0.8;
+}
+
+.teaching-card .teaching-location {
+    margin-top: 0.2rem;
+    font-size: clamp(0.7rem, 1.5vw, 0.75rem);
+    opacity: 0.8;
+}
+
+.teaching-card .teaching-role {
     display: block;
     font-size: clamp(0.8rem, 1.5vw, 0.85rem);
-    color: var(--text-muted);
-    margin-top: 0.3rem;
+    color: var(--accent);
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
 }
 
 .career-card img,
@@ -923,7 +947,6 @@ section h2 {
     max-height: 80px;
     margin: 0 auto;
     object-fit: contain;
-    transition: transform 0.4s ease;
 }
 
 /* =====================================================
