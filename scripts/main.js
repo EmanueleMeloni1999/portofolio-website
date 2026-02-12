@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Hero blur effect
         if (heroSection) {
-            if (currentScroll > 200) {
+            if (currentScroll > 400) {
                 heroSection.classList.add('scrolled');
             } else {
                 heroSection.classList.remove('scrolled');
