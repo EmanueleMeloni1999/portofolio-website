@@ -89,18 +89,25 @@
             <!-- RIGHT -->
             <div class="about-right">
                 <img src="assets/images/profile/profile.png" alt="Emanuele Meloni">
+                <span class="photo-caption">Emanuele Meloni · 2025</span>
             </div>
         </div>
 
         <!-- METRICS -->
         <div class="about-metrics">
             <div class="metric">
-                <span class="metric-number">+4</span>
+                <span class="metric-number" data-target="4" data-suffix="+">
+                    <span class="metric-value">0</span><span class="metric-suffix">+</span>
+                </span>
                 <span class="metric-label">Years of Experience</span>
             </div>
 
+            <div class="metrics-divider"></div>
+
             <div class="metric">
-                <span class="metric-number">8+</span>
+                <span class="metric-number" data-target="8" data-suffix="+">
+                    <span class="metric-value">0</span><span class="metric-suffix">+</span>
+                </span>
                 <span class="metric-label">Projects</span>
             </div>
         </div>
@@ -110,10 +117,17 @@
             <a href="assets/documents/CV.pdf" class="btn">Download CV</a>
             <a href="https://www.linkedin.com/in/emanuelemeloni99/" target="_blank" class="btn">LinkedIn</a>
             <a href="https://www.imdb.com/" target="_blank" class="btn">IMDb</a>
-            <a href="assets/documents/Reel.mp4" class="btn">Download Reel</a>
+            <a href="assets/documents/Reel.mp4" class="btn">ShowReel</a>
         </div>
     </section>
 
+
+    <!-- SECTION SEPARATOR: About → Projects (decorative) -->
+    <div class="section-separator-decorated">
+        <span class="sep-line"></span>
+        <span class="sep-diamond"></span>
+        <span class="sep-line"></span>
+    </div>
 
     <!-- PROJECTS -->
     <section id="projects" class="projects">
@@ -123,20 +137,29 @@
         </div>
     </section>
 
-    <!-- CAREER -->
-    <section id="career" class="career">
-        <h2>Career</h2>
-        <div class="career-grid">
-            <!-- Each studio / role goes here -->
-        </div>
-    </section>
+    <!-- SECTION SEPARATOR: Projects → Career/Teaching -->
+    <div class="section-separator"></div>
 
-    <!-- CAREER -->
-    <section id="teaching" class="teaching">
-        <h2>Teaching</h2>
-        <div class="teaching-grid"></div>
-    </section>
+    <!-- CAREER & TEACHING GROUP -->
+    <div class="professional-group">
+        <section id="career" class="career">
+            <h2>Career</h2>
+            <div class="career-grid">
+                <!-- Each studio / role goes here -->
+            </div>
+        </section>
 
+        <!-- Subtle inner separator between Career and Teaching -->
+        <div class="group-inner-separator"></div>
+
+        <section id="teaching" class="teaching">
+            <h2>Teaching</h2>
+            <div class="teaching-grid"></div>
+        </section>
+    </div>
+
+    <!-- SECTION SEPARATOR: Teaching → Personal Work -->
+    <div class="section-separator"></div>
 
     <!-- PERSONAL WORK -->
     <section id="personal-work" class="personal-work">
@@ -146,20 +169,35 @@
         </div>
     </section>
 
+    <!-- SECTION SEPARATOR: Personal Work → Contact -->
+    <div class="section-separator"></div>
+
     <!-- CONTACT -->
     <section id="contact" class="contact">
         <h2>Contact</h2>
-        <div class="contact-info">
-            <p>Email: emanuele.meloni1999@gmail.com</p>
-            <p>Location: Rome, Italy</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/emanuelemeloni99/" target="_blank">LinkedIn</a></p>
+
+        <!-- Info cards: Email + LinkedIn side by side -->
+        <div class="contact-cards">
+            <div class="contact-card">
+                <span class="contact-card-label">Email</span>
+                <a href="mailto:emanuele.meloni1999@gmail.com">emanuele.meloni1999@gmail.com</a>
+            </div>
+            <div class="contact-card">
+                <span class="contact-card-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/emanuelemeloni99/" target="_blank">linkedin.com/in/emanuelemeloni99</a>
+            </div>
         </div>
-        <form class="contact-form" action="#" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+
+        <!-- Form -->
+        <div class="contact-form-wrapper">
+            <form class="contact-form" action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <!-- SCRIPT -->

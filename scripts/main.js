@@ -82,6 +82,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                 `;
 
+                if (project.link) {
+                    card.style.cursor = 'pointer';
+                    card.addEventListener('click', () => {
+                        window.open(project.link, '_blank');
+                    });
+                }
+
                 grid.appendChild(card);
             });
         })
@@ -106,6 +113,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     <span>${c.role}</span>
                     <span>${c.period}</span>
                 `;
+
+                if (c.link) {
+                    card.style.cursor = 'pointer';
+                    card.addEventListener('click', () => {
+                        window.open(c.link, '_blank');
+                    });
+                }
+
                 container.appendChild(card);
             });
         })
@@ -190,6 +205,60 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error("Personal projects loading error:", error));
 
     
+    // ========================================
+    // METRIC COUNTER SCRAMBLE ANIMATION
+    // ========================================
+    const metricNumbers = document.querySelectorAll('.metric-number[data-target]');
+
+    function scrambleCounter(element) {
+        const target = parseInt(element.dataset.target);
+        const valueSpan = element.querySelector('.metric-value');
+        if (!valueSpan || element.dataset.animated === 'true') return;
+
+        element.dataset.animated = 'true';
+
+        const duration = 1000;       // 1 second total
+        const scrambleSpeed = 50;    // new random number every 50ms
+        const startTime = Date.now();
+
+        const interval = setInterval(() => {
+            const elapsed = Date.now() - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            if (progress < 1) {
+                // Random number scramble — range narrows as we approach the end
+                const maxRange = Math.max(1, Math.ceil(9 * (1 - progress)));
+                const randomNum = Math.floor(Math.random() * maxRange) +
+                    Math.max(0, target - Math.ceil(maxRange / 2));
+                valueSpan.textContent = Math.max(0, randomNum);
+            } else {
+                // Land on the correct number
+                clearInterval(interval);
+                valueSpan.textContent = target;
+            }
+        }, scrambleSpeed);
+    }
+
+    // Trigger on scroll into view
+    const metricsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Small stagger between metrics
+                const metrics = entry.target.querySelectorAll('.metric-number[data-target]');
+                metrics.forEach((el, i) => {
+                    setTimeout(() => scrambleCounter(el), i * 200);
+                });
+                metricsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const metricsContainer = document.querySelector('.about-metrics');
+    if (metricsContainer) {
+        metricsObserver.observe(metricsContainer);
+    }
+
+
     // ========================================
     // SMOOTH SCROLL WITH OFFSET
     // ========================================

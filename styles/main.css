@@ -48,7 +48,8 @@ a {
     --success: rgb(34, 197, 94);
 
     --text-muted: #9a9a9a;
-    
+    --text-titles: rgba(230, 225, 221, 1);
+
     --header-height: 70px;
 }
 
@@ -81,6 +82,7 @@ section h2 {
     font-size: clamp(2rem, 5vw, 2.5rem);
     text-align: center;
     margin-bottom: 2rem;
+    color: var(--text-titles);
 }
 
 .section-divider {
@@ -89,6 +91,71 @@ section h2 {
     background: var(--accent);
     margin: 4rem auto;
     opacity: 0.5;
+}
+
+/* Main section separators */
+.section-separator {
+    display: block;
+    width: 100%;
+    max-width: 80px;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background: var(--accent);
+    opacity: 0.4;
+}
+
+/* Decorated separator (line — diamond — line) */
+.section-separator-decorated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+.section-separator-decorated .sep-line {
+    display: block;
+    height: 1px;
+    width: 60px;
+    background: var(--accent);
+    opacity: 0.35;
+}
+
+@media (min-width: 768px) {
+    .section-separator-decorated .sep-line {
+        width: 100px;
+    }
+}
+
+.section-separator-decorated .sep-diamond {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--accent);
+    transform: rotate(45deg);
+    opacity: 0.5;
+    flex-shrink: 0;
+}
+
+/* Career + Teaching professional group */
+.professional-group {
+    border-top: 1px solid rgba(194, 163, 107, 0.12);
+    border-bottom: 1px solid rgba(194, 163, 107, 0.12);
+}
+
+/* Lighter, shorter inner separator within Career/Teaching */
+.group-inner-separator {
+    display: block;
+    width: 100%;
+    max-width: 40px;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background: var(--accent-soft);
+    opacity: 0.25;
 }
 
 
@@ -256,6 +323,7 @@ section h2 {
     font-size: clamp(2.5rem, 8vw, 5rem);
     margin-bottom: 0.5rem;
     line-height: 1.2;
+    color: var(--text-titles);
 }
 
 .hero-content p {
@@ -348,9 +416,20 @@ section h2 {
 }
 
 .about-left h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 2.5rem);
     margin-bottom: 1.5rem;
     text-align: left;
+    color: var(--text-titles);
+}
+
+/* Underline below About Me */
+.about-left h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--accent);
+    margin-top: 0.8rem;
 }
 
 .about-text p {
@@ -365,9 +444,30 @@ section h2 {
 }
 
 .about-right {
+    position: relative;
     overflow: hidden;
     border-radius: 12px;
     order: -1;
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.45);
+    text-align: right;
+    letter-spacing: 0.5px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.about-right:hover .photo-caption {
+    opacity: 1;
 }
 
 @media (min-width: 768px) {
@@ -417,6 +517,20 @@ section h2 {
     font-size: clamp(2.5rem, 6vw, 3.5rem);
     font-weight: 600;
     color: var(--accent);
+    display: inline-flex;
+    align-items: baseline;
+    font-variant-numeric: tabular-nums;
+}
+
+.metric-value {
+    display: inline-block;
+    min-width: 1.2ch;
+    text-align: center;
+}
+
+.metric-prefix,
+.metric-suffix {
+    color: var(--accent);
 }
 
 .metric-label {
@@ -424,6 +538,40 @@ section h2 {
     margin-top: 0.4rem;
     font-size: clamp(0.85rem, 1.5vw, 0.9rem);
     color: var(--text-muted);
+}
+
+/* Vertical line between metrics (horizontal on mobile) */
+.metrics-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.4;
+    align-self: center;
+}
+
+@media (min-width: 768px) {
+    .metrics-divider {
+        width: 1px;
+        height: 50px;
+    }
+}
+
+/* Separator between metrics and CTA buttons */
+.about-separator {
+    display: block;
+    width: 100%;
+    max-width: 120px;
+    height: 1px;
+    border: none;
+    background: var(--accent);
+    opacity: 0.3;
+    margin: 2.5rem auto 0;
+}
+
+@media (min-width: 768px) {
+    .about-separator {
+        margin-top: 3rem;
+    }
 }
 
 /* =========================
@@ -436,6 +584,10 @@ section h2 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.8rem;
+}
+
+.cta-buttons .btn {
+    min-width: 150px;
 }
 
 @media (min-width: 768px) {
@@ -538,16 +690,19 @@ section h2 {
 .projects h2,
 .career h2,
 .teaching h2,
-.personal-work h2 {
+.personal-work h2,
+.contact h2 {
     text-align: center;
     margin-bottom: 2rem;
+    color: var(--text-titles);
 }
 
 @media (min-width: 768px) {
     .projects h2,
     .career h2,
     .teaching h2,
-    .personal-work h2 {
+    .personal-work h2,
+    .contact h2 {
         margin-bottom: 3rem;
     }
 }
@@ -566,19 +721,14 @@ section h2 {
 
 @media (hover: hover) {
     .project-card:hover {
-        transform: translateY(-6px);
+        transform: translateY(-6px) scale(1.03);
         box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-    }
-    
-    .project-card:hover img {
-        transform: scale(1.08);
     }
 }
 
 .project-card img {
     aspect-ratio: 2/3;
     object-fit: cover;
-    transition: transform 0.6s ease;
     width: 100%;
 }
 
@@ -816,29 +966,77 @@ section h2 {
 
 .contact {
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.contact-info {
-    margin: 2rem 0;
-}
-
-.contact-info p {
-    margin-bottom: 0.8rem;
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
-}
-
-.contact-info a {
-    color: var(--accent);
-    transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-    color: var(--accent-soft);
-}
-
-.contact-form {
-    max-width: 600px;
+/* Cards: Email + LinkedIn side by side */
+.contact-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 700px;
     margin: 2rem auto 0;
+}
+
+@media (min-width: 600px) {
+    .contact-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.contact-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 0.35s ease;
+}
+
+@media (hover: hover) {
+    .contact-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.contact-card-label {
+    font-size: clamp(0.7rem, 1.2vw, 0.75rem);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.contact-card a {
+    color: var(--accent-soft);
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+    transition: color 0.3s ease;
+    word-break: break-all;
+}
+
+.contact-card a:hover {
+    color: var(--accent);
+}
+
+/* Form wrapper */
+.contact-form-wrapper {
+    max-width: 700px;
+    margin: 2.5rem auto 0;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .contact-form-wrapper {
+        padding: 2.5rem 2rem;
+    }
 }
 
 .contact-form input,
@@ -846,7 +1044,7 @@ section h2 {
     width: 100%;
     padding: 0.8rem;
     margin-bottom: 1rem;
-    background: var(--bg-light);
+    background: var(--bg-dark);
     border: 1px solid var(--border);
     border-radius: 8px;
     color: #fff;
