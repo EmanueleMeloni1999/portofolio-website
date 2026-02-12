@@ -4,41 +4,47 @@
         "role": "Tech Animator - Pipeline TD",
         "period": "September 2023 - Present",
         "logo": "assets/images/studios/al1.webp",
-        "link" : "https://www.al-one.it/"
+        "link" : "https://www.al-one.it/",
+        "kind" : "FullTime:OnSite"
     },
     {
         "studio": "Moonshot CGI",
         "role": "Rigging Lead",
         "period": "January 2024 - Present",
         "logo": "assets/images/studios/Moonshot.webp",
-        "link" : "https://moonshotcgi.it/"
+        "link" : "https://moonshotcgi.it/",
+        "kind" : "Freelance: Remote"
     },
     {
         "studio": "RedRaion",
         "role": "Rigging TD",
         "period": "December 2025 - January 2026",
         "logo": "assets/images/studios/RedRaion.webp",
-        "link" : "https://www.redraion.com/"
+        "link" : "https://www.redraion.com/",
+        "kind" : "Freelance: Remote"
     },
     {
         "studio": "Insomniac",
         "role": "Rigging TD",
         "period": "April 2025 - August 2025",
         "logo": "assets/images/studios/Insomniac.webp",
-        "link": "https://www.insomniac.com/"
+        "link": "https://www.insomniac.com/",
+        "kind" : "Freelance: Remote"
     },
     {
         "studio": "Arx Anima",
         "role": "Rigging TD",
         "period": "January 2023 - June 2023",
         "logo": "assets/images/studios/Arx.webp",
-        "link": "https://arxanima.com/"
+        "link": "https://arxanima.com/",
+        "kind" : "Freelance: Remote"
     },
     {
         "studio": "RainbowCGI",
         "role": "Rigging TD",
         "period": "July 2022 - August 2023",
         "logo": "assets/images/studios/RainbowCG.webp",
-        "link": "https://www.rbw-cgi.it/it/rainbow-cgi/"
+        "link": "https://www.rbw-cgi.it/it/rainbow-cgi/",
+        "kind" : "FullTime:OnSite"
     }
 ]

@@ -1,30 +1,26 @@
 [
     {
-        "title": "AIV - Accademia Italiana Videogiochi",
+        "title": "Accademia Italiana Videogiochi",
         "period": "March 2025 - Present",
         "location": "Rome, Italy",
         "image": "assets/images/teaching/AIV.webp",
-        "link" : "https://www.aiv01.it/"
+        "link" : "https://www.aiv01.it/",
+        "role": "Creature Rigging Professor"
     },
     {
-        "title": "IED Istituto Europeo di Design",
+        "title": "Istituto Europeo di Design",
         "period": "October 2023 - Present",
         "location": "Rome, Italy",
         "image": "assets/images/teaching/IED.webp",
-        "link" : "https://www.ied.it/"
+        "link" : "https://www.ied.it/",
+        "role": "Character Rigging Professor"
     },
     {
         "title": "TheSign - Comics & Arts Academy",
         "period": "March 2023 - November 2025",
         "location": "Florence, Italy",
         "image": "assets/images/teaching/TheSign.webp",
-        "link" : "https://thesign.academy/"
-    },
-    {
-        "title": "Moonshot Accademy",
-        "period": "March 2023 - November 2025",
-        "location": "Florence, Italy",
-        "image": "assets/images/studios/Moonshot.webp",
-        "link" : "https://thesign.academy/"
+        "link" : "https://thesign.academy/",
+        "role": "Character Rigging Professor"
     }
 ]
