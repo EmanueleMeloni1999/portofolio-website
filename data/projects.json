@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Forest",
+        "role": "Rigging TD - Pipeline TD",
+        "studio": "Al-one s.r.l",
+        "image": "assets/images/projects/Poster_Forest.webp",
+        "description": "Brief description of the project",
+        "status": "In Production",
+        "link": "https://www.instagram.com/reel/CzySygpoQHk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+        "title": "TRASH: Tale of Wastetown",
+        "role": "Technical Animator",
+        "studio": "Al-one s.r.l",
+        "image": "assets/images/projects/Poster_Trash.webp",
+        "description": "Brief description of the project",
+        "status": "In Production",
+        "link": "https://www.youtube.com/watch?v=3jeKiYQX48c&t=39s"
+    },
+    {
+        "title": "Primitive War",
+        "role": "Rigging Lead",
+        "studio": "Moonshot CGI",
+        "image": "assets/images/projects/Poster_PrimitiveWar.webp",
+        "description": "Brief description of the project",
+        "status": "Released",
+        "link": "https://www.youtube.com/watch?v=ixXxdWY6d68"
+    },
+    {
+        "title": "Unity: Insomniac x Tomorrowland",
+        "role": "Rigging TD",
+        "studio": "Insomniac",
+        "image": "assets/images/projects/Poster_Unity.webp",
+        "description": "Brief description of the project",
+        "status": "Released",
+        "link": "https://www.youtube.com/watch?v=bjRhpwe_LCU"
+    },
+    {
+        "title": "Mission Granny",
+        "role": "Rigging TD",
+        "studio": "Arx Anima",
+        "image": "assets/images/projects/Poster_MissionGranny.webp",
+        "description": "Brief description of the project",
+        "status": "Released",
+        "link": "https://arxanima.com/features-and-series/op-oma"
+    },
+    {
+        "title": "Mermaid Magic",
+        "role": "Rigging TD",
+        "studio": "Rainbow CGI",
+        "image": "assets/images/projects/Poster_MermaidMagic.webp",
+        "description": "Brief description of the project",
+        "status": "Released",
+        "link": "https://www.youtube.com/watch?v=M0vGYWCRAO4"
+    },
+    {
+        "title": "Super Kitties",
+        "role": "Rigging TD",
+        "studio": "Rainbow CGI",
+        "image": "assets/images/projects/Poster_Superkitties.webp",
+        "description": "Brief description of the project",
+        "status": "Released",
+        "link": "https://www.youtube.com/watch?v=E7txCmn44dI"
+    },
+    {
+        "title": "Pup Struction",
+        "role": "Rigging TD",
+        "studio": "Rainbow CGI",
+        "image": "assets/images/projects/Poster_PupStruction.webp",
+        "description": "Brief description of the project",
+        "status": "Released",
+        "link": "https://www.youtube.com/watch?v=TMdSBC6vVo0"
+    }
+]

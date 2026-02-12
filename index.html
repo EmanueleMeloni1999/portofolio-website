@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emanuele Meloni - Portfolio</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="site-header">
+        <div class="header-left">
+            <h1>Emanuele Meloni</h1>
+            <span>3D Rigger | Pipeline TD | Tech Animator</span>
+        </div>
+        <nav class="header-right">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#career">Career</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#personal-work">Personal Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HOME / HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h2>Emanuele Meloni</h2>
+            <p>3D Rigger · Pipeline TD · Technical Animator</p>
+        </div>
+
+        <!-- Una sola immagine per la tigre -->
+        <img id="hero-tiger" src="assets/sprites/tiger_head/head.0001.png" alt="Tiger Head" class="hero-tiger">
+    </section>
+
+
+
+    <!-- ABOUT ME -->
+    <section id="about" class="about">
+        <div class="about-container">
+
+            <!-- LEFT -->
+            <div class="about-left">
+                <h2>About Me</h2>
+
+                <div class="about-text">
+                    <p>
+                        I am a <strong>Rigger and Technical Artist</strong> deeply passionate about my craft. 
+                        Since a young age, I have been fascinated by cinema and animation,
+                        long before fully understanding the machinery behind them.
+                    </p>
+
+                    <p>
+                        Rigging became the perfect intersection between <strong>logic and art</strong>. 
+                        It allows me to merge analytical thinking, structured problem solving, 
+                        and artistic sensitivity into a single discipline.
+                    </p>
+
+                    <p>
+                        Throughout my career I have led teams, developed 
+                        <strong>custom tools and proprietary systems</strong>, 
+                        and optimized production pipelines to empower artists 
+                        to work more efficiently and creatively.
+                    </p>
+
+                    <p>
+                        Alongside production work, I also teach
+                        strengthening my ability to communicate complex technical ideas 
+                        in a clear and production-oriented way.
+                    </p>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="about-right">
+                <img src="assets/images/profile/profile.png" alt="Emanuele Meloni">
+            </div>
+        </div>
+
+        <!-- METRICS -->
+        <div class="about-metrics">
+            <div class="metric">
+                <span class="metric-number">+4</span>
+                <span class="metric-label">Years of Experience</span>
+            </div>
+
+            <div class="metric">
+                <span class="metric-number">8+</span>
+                <span class="metric-label">Projects</span>
+            </div>
+        </div>
+
+        <!-- CTA BUTTONS -->
+        <div class="cta-buttons">
+            <a href="assets/documents/CV.pdf" class="btn">Download CV</a>
+            <a href="https://www.linkedin.com/in/emanuelemeloni99/" target="_blank" class="btn">LinkedIn</a>
+            <a href="https://www.imdb.com/" target="_blank" class="btn">IMDb</a>
+            <a href="assets/documents/Reel.mp4" class="btn">Download Reel</a>
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <!-- Each project card goes here -->
+        </div>
+    </section>
+
+    <!-- CAREER -->
+    <section id="career" class="career">
+        <h2>Career</h2>
+        <div class="career-grid">
+            <!-- Each studio / role goes here -->
+        </div>
+    </section>
+
+    <!-- CAREER -->
+    <section id="teaching" class="teaching">
+        <h2>Teaching</h2>
+        <div class="teaching-grid"></div>
+    </section>
+
+
+    <!-- PERSONAL WORK -->
+    <section id="personal-work" class="personal-work">
+        <h2>Personal Work</h2>
+        <div class="personal-work-grid">
+            <!-- Each personal project card goes here -->
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p>Email: emanuele.meloni1999@gmail.com</p>
+            <p>Location: Rome, Italy</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/emanuelemeloni99/" target="_blank">LinkedIn</a></p>
+        </div>
+        <form class="contact-form" action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- SCRIPT -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/interactions.js"></script>
+
+</body>
+</html>

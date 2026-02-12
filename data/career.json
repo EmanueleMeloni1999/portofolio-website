@@ -1,0 +1,44 @@
+[
+    {
+        "studio": "Al-one s.r.l",
+        "role": "Rigging TD - Pipeline TD - Tech Animator",
+        "period": "September 2023 - Present",
+        "logo": "assets/images/studios/al1.webp",
+        "link" : "https://www.al-one.it/"
+    },
+    {
+        "studio": "Moonshot CGI",
+        "role": "Rigging Lead",
+        "period": "January 2024 - Present",
+        "logo": "assets/images/studios/Moonshot.webp",
+        "link" : "https://moonshotcgi.it/"
+    },
+    {
+        "studio": "RedRaion",
+        "role": "Rigging TD",
+        "period": "December 2025 - January 2026",
+        "logo": "assets/images/studios/RedRaion.webp",
+        "link" : "https://www.redraion.com/"
+    },
+    {
+        "studio": "Insomniac",
+        "role": "Rigging TD",
+        "period": "April 2025 - August 2025",
+        "logo": "assets/images/studios/Insomniac.webp",
+        "link": "https://www.insomniac.com/"
+    },
+    {
+        "studio": "Arx Anima",
+        "role": "Rigging TD",
+        "period": "January 2023 - June 2023",
+        "logo": "assets/images/studios/Arx.webp",
+        "link": "https://arxanima.com/"
+    },
+    {
+        "studio": "RainbowCGI",
+        "role": "Rigging TD",
+        "period": "July 2022 - August 2023",
+        "logo": "assets/images/studios/RainbowCG.webp",
+        "link": "https://www.rbw-cgi.it/it/rainbow-cgi/"
+    }
+]

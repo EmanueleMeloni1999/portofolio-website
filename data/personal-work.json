@@ -1,0 +1,23 @@
+[
+    {
+        "index": "01", 
+        "title": "MS Workflow",
+        "subtitle": "Rigging Workflow and Tools",
+        "description": "A dedicate rigging workflow based on mGear framework",
+        "image": "assets/images/personal-work/Poster_Forest.webp"
+    },
+    {
+        "index": "02", 
+        "title": "Moonshop Creatures",
+        "subtitle": "Realistic Creature Rigs",
+        "description": "Una serie di creature realistiche riggate al quale sono stato rigging supervisor",
+        "image": "assets/images/personal-work/Poster_Forest.webp"
+    },
+    {
+        "index": "03", 
+        "title": "Drogon",
+        "subtitle": "Vyver Creature Rig",
+        "description": "Un Rig Fan made di drogon con molte features",
+        "image": "assets/images/personal-work/Drogon.png"
+    }
+]
