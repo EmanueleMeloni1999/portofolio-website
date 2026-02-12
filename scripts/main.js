@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const introImg = document.getElementById('intro-animation');
 
     if (introScreen && introImg) {
+        console.log('Intro elements found, starting animation...');
         // Block scrolling during intro
         document.body.classList.add('intro-active');
 
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
             img.src = `assets/sprites/thumb_animated/thumb_reel${String(i).padStart(3, '0')}.png`;
             frames.push(img);
         }
+        console.log(`Preloading ${totalFrames} frames...`);
 
         // Play animation
         const animationInterval = setInterval(() => {
@@ -30,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 introImg.src = frames[currentFrame].src;
             } else {
                 // Animation complete - fade out
+                console.log('Animation complete, fading out...');
                 clearInterval(animationInterval);
                 setTimeout(() => {
                     introScreen.classList.add('fade-out');
@@ -37,10 +40,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         introScreen.style.display = 'none';
                         // Re-enable scrolling after intro
                         document.body.classList.remove('intro-active');
+                        console.log('Intro finished');
                     }, 800); // Match CSS transition duration
                 }, 300); // Small delay before fade
             }
         }, frameInterval);
+    } else {
+        console.error('Intro elements not found:', { introScreen, introImg });
     }
 
     // ========================================
