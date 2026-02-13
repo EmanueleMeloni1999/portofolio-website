@@ -52,9 +52,24 @@ body {
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     z-index: 100;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
+    gap: 1rem;
+}
+
+.nav-left {
+    justify-self: start;
+}
+
+.nav-center {
+    display: flex;
+    gap: 1.5rem;
+    justify-self: center;
+}
+
+.nav-right {
+    justify-self: end;
 }
 
 .nav-link {
@@ -62,10 +77,29 @@ body {
     text-decoration: none;
     font-size: clamp(0.85rem, 1.5vw, 0.95rem);
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
     color: var(--accent);
+}
+
+@media (max-width: 767px) {
+    .project-nav {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 0.5rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-left,
+    .nav-right {
+        justify-self: center;
+    }
+
+    .nav-center {
+        order: -1;
+    }
 }
 
 /* =====================================================
