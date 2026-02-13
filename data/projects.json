@@ -7,7 +7,8 @@
         "video": false,
         "description": "Rigged main characters; developed full-pipeline workflows and tools for all departments",
         "status": "In Production",
-        "link": "https://www.instagram.com/reel/CzySygpoQHk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        "link": "https://www.instagram.com/reel/CzySygpoQHk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+        "kind": "Animation Feature Film"
     },
     {
         "title": "TRASH: Tale of Wastetown",
@@ -17,7 +18,8 @@
         "video": "assets/videos/Trash.mp4",
         "description": "Maya/Unreal Rigging and Cinematic Integration for gameplay",
         "status": "In Production",
-        "link": "https://www.youtube.com/watch?v=3jeKiYQX48c&t=39s"
+        "link": "https://www.youtube.com/watch?v=3jeKiYQX48c&t=39s",
+        "kind": "Video Game"
     },
     {
         "title": "Primitive War",
@@ -27,7 +29,8 @@
         "video": "assets/videos/PrimitiveWar.mp4",
         "description": "Lead Rigger supervising Creatures (Dinosaurs) and Vehicles",
         "status": "Released",
-        "link": "https://www.youtube.com/watch?v=ixXxdWY6d68"
+        "link": "https://www.youtube.com/watch?v=ixXxdWY6d68",
+        "kind": "Live-Action Feature Film"
     },
     {
         "title": "Unity: Insomniac x Tomorrowland",
@@ -37,7 +40,8 @@
         "video": "assets/videos/Unity.mp4",
         "description": "Creature rigging and engine implementation tools for the Las Vegas Sphere",
         "status": "Released",
-        "link": "https://www.youtube.com/watch?v=bjRhpwe_LCU"
+        "link": "https://www.youtube.com/watch?v=bjRhpwe_LCU",
+        "kind": "Immersive Show"
     },
     {
         "title": "Mission Granny",
@@ -47,7 +51,8 @@
         "video": false,
         "description": "Character and Prop rigging for a commercial trailer",
         "status": "In Production",
-        "link": "https://arxanima.com/features-and-series/op-oma"
+        "link": "https://arxanima.com/features-and-series/op-oma",
+        "kind": "Animation Feature Film"
     },
     {
         "title": "Mermaid Magic",
@@ -57,7 +62,8 @@
         "video": "assets/videos/MermaidMagic.mp4",
         "description": "Character and Prop rigging for a Netflix animated series",
         "status": "Released",
-        "link": "https://www.youtube.com/watch?v=M0vGYWCRAO4"
+        "link": "https://www.youtube.com/watch?v=M0vGYWCRAO4",
+        "kind": "Animation Serie"
     },
     {
         "title": "Super Kitties",
@@ -67,7 +73,8 @@
         "video": "assets/videos/SuperKitties.mp4",
         "description": "Prop rigging for a Disney Junior animated series",
         "status": "Released",
-        "link": "https://www.youtube.com/watch?v=E7txCmn44dI"
+        "link": "https://www.youtube.com/watch?v=E7txCmn44dI",
+        "kind": "Animation Serie"
     },
     {
         "title": "Pup Struction",
@@ -77,6 +84,7 @@
         "video": "assets/videos/PupStruction.mp4",
         "description": "Prop rigging for a Disney Junior animated series",
         "status": "Released",
-        "link": "https://www.youtube.com/watch?v=TMdSBC6vVo0"
+        "link": "https://www.youtube.com/watch?v=TMdSBC6vVo0",
+        "kind": "Animation Serie"
     }
 ]
