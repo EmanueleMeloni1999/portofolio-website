@@ -92,7 +92,37 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     
-    
+
+    // ========================================
+    // CORE SKILLS
+    // ========================================
+    fetch("data/skills.json")
+        .then(response => response.json())
+        .then(skills => {
+            const grid = document.getElementById("skills-grid");
+            if (!grid) return;
+
+            skills.forEach(skill => {
+                const item = document.createElement("a");
+                item.classList.add("skill-item");
+
+                if (skill.link) {
+                    item.href = skill.link;
+                    item.target = "_blank";
+                    item.rel = "noopener noreferrer";
+                }
+
+                item.innerHTML = `
+                    <img src="${skill.image}" alt="${skill.name}" loading="lazy">
+                    <span>${skill.name}</span>
+                `;
+
+                grid.appendChild(item);
+            });
+        })
+        .catch(error => console.error("Skills loading error:", error));
+
+
     // ========================================
     // PROJECTS
     // ========================================

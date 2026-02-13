@@ -752,6 +752,88 @@ section h2 {
     }
 }
 
+/* =========================
+   CORE SKILLS SECTION
+========================= */
+
+.skills-section {
+    margin-top: 4rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .skills-section {
+        margin-top: 5rem;
+    }
+}
+
+.skills-title {
+    font-size: clamp(0.85rem, 1.5vw, 0.9rem);
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.2rem;
+    }
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.skill-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-item img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.skill-item span {
+    font-size: clamp(0.8rem, 1.5vw, 0.85rem);
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 /* =====================================================
    PROJECTS, CAREER, TEACHING, PERSONAL WORK
