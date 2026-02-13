@@ -308,14 +308,19 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             // Add "View All Projects" button after the grid
+            const btnWrapper = document.createElement("div");
+            btnWrapper.classList.add("view-all-btn-wrapper");
+
             const viewAllBtn = document.createElement("a");
             viewAllBtn.href = "personal-projects.html";
             viewAllBtn.classList.add("view-all-projects-btn");
             viewAllBtn.innerHTML = `View All Projects <span class="arrow">→</span>`;
 
+            btnWrapper.appendChild(viewAllBtn);
+
             const personalWorkSection = document.getElementById("personal-work");
             if (personalWorkSection) {
-                personalWorkSection.appendChild(viewAllBtn);
+                personalWorkSection.appendChild(btnWrapper);
             }
         })
         .catch(error => console.error("Personal projects loading error:", error));
