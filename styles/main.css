@@ -1339,8 +1339,10 @@ section h2 {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
     transition: all 0.35s ease;
+    text-align: center;
 }
 
 @media (hover: hover) {
