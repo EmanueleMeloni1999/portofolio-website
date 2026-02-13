@@ -1,52 +1,62 @@
 [
-    {
-        "name": "Maya",
-        "link": "https://www.autodesk.com/products/maya",
-        "image": "assets/images/skills/maya.webp"
-    },
-    {
-        "name": "Houdini",
-        "link": "https://www.sidefx.com/products/houdini/",
-        "image": "assets/images/skills/houdini.webp"
-    },
-    {
-        "name": "Unreal Engine",
-        "link": "https://www.unrealengine.com/",
-        "image": "assets/images/skills/unreal.webp"
-    },
-    {
-        "name": "mGear",
-        "link": "https://mgear-framework.com/",
-        "image": "assets/images/skills/mgear.webp"
-    },
-    {
-        "name": "Python",
-        "link": "https://www.python.org/",
-        "image": "assets/images/skills/python.webp"
-    },
-    {
-        "name": "PySide",
-        "link": "https://riverbankcomputing.com/software/pyqt/",
-        "image": "assets/images/skills/pyqt.webp"
-    },
-    {
-        "name": "USD",
-        "link": "https://openusd.org/",
-        "image": "assets/images/skills/usd.webp"
-    },
-    {
-        "name": "ShotGrid",
-        "link": "https://www.autodesk.com/products/shotgrid",
-        "image": "assets/images/skills/shotgrid.webp"
-    },
-    {
-        "name": "FFmpeg",
-        "link": "https://ffmpeg.org/",
-        "image": "assets/images/skills/ffmpeg.webp"
-    },
-    {
-        "name": "Git",
-        "link": "https://git-scm.com/",
-        "image": "assets/images/skills/git.webp"
-    }
+  {
+    "name": "Maya",
+    "link": "https://www.autodesk.com/products/maya",
+    "image": "assets/images/icons/maya.webp"
+  },
+  {
+    "name": "Houdini",
+    "link": "https://www.sidefx.com/products/houdini/",
+    "image": "assets/images/icons/houdini.webp"
+  },
+  {
+    "name": "Unreal Engine",
+    "link": "https://www.unrealengine.com/",
+    "image": "assets/images/icons/unreal.webp"
+  },
+  {
+    "name": "NukeX",
+    "link": "https://www.foundry.com/products/nuke-family/nukex",
+    "image": "assets/images/icons/nuke.webp"
+  },
+  {
+    "name": "Python",
+    "link": "https://www.python.org/",
+    "image": "assets/images/icons/python.webp"
+  },
+  {
+    "name": "PySide",
+    "link": "https://riverbankcomputing.com/software/pyqt/",
+    "image": "assets/images/icons/pyside.webp"
+  },
+  {
+    "name": "mGear",
+    "link": "https://mgear-framework.com/",
+    "image": "assets/images/icons/mgear.webp"
+  },
+  {
+    "name": "Pipeline",
+    "link": false,
+    "image": "assets/images/icons/python.webp"
+  },
+  {
+    "name": "USD",
+    "link": "https://openusd.org/",
+    "image": "assets/images/icons/usd.webp"
+  },
+  {
+    "name": "ShotGrid",
+    "link": "https://www.autodesk.com/products/shotgrid",
+    "image": "assets/images/icons/shotgrid.webp"
+  },
+  {
+    "name": "FFmpeg",
+    "link": "https://ffmpeg.org/",
+    "image": "assets/images/icons/ffmpeg.webp"
+  },
+  {
+    "name": "Git",
+    "link": "https://git-scm.com/",
+    "image": "assets/images/icons/git.webp"
+  }
 ]
