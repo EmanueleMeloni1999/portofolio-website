@@ -627,7 +627,7 @@ section h2 {
     padding: 0.5rem 0.8rem;
     font-size: 0.7rem;
     color: rgba(255, 255, 255, 0.45);
-    text-align: right;
+    text-align: center;
     letter-spacing: 0.5px;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
     pointer-events: none;
