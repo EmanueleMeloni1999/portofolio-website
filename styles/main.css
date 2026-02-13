@@ -461,6 +461,19 @@ section h2 {
 .hero-content p {
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-hero {
+    border-radius: 8px;
+    min-width: 150px;
 }
 
 /* Tiger Animation - Responsive */
