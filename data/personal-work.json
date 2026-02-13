@@ -4,20 +4,20 @@
         "title": "MS Workflow",
         "subtitle": "Rigging Workflow and Tools",
         "description": "A dedicated rigging workflow based on the mGear framework, featuring custom pipeline tools and automation",
-        "image": "assets/images/personal-work/Poster_Forest.webp"
+        "image": "assets/images/personal-work/MSWorkflow.webp"
     },
     {
         "index": "02", 
         "title": "Moonshot Creatures",
         "subtitle": "Realistic Creature Rigs",
         "description": "A series of high-end realistic creatures where I served as Rigging Supervisor, overseeing technical quality",
-        "image": "assets/images/personal-work/Poster_Forest.webp"
+        "image": "assets/images/personal-work/MoonshotCreatures.webp"
     },
     {
         "index": "03", 
         "title": "Drogon",
         "subtitle": "Wyvern Creature Rig",
         "description": "A feature-rich, fan-made Wyvern rig of Drogon, showcasing advanced deformation and complex control systems",
-        "image": "assets/images/personal-work/Drogon.png"
+        "image": "assets/images/personal-work/Drogon.webp"
     }
 ]
