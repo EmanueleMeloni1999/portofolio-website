@@ -5,7 +5,7 @@
         "period": "September 2023 - Present",
         "logo": "assets/images/studios/al1.webp",
         "link" : "https://www.al-one.it/",
-        "kind" : "FullTime:OnSite"
+        "kind" : "FullTime: On Site"
     },
     {
         "studio": "Moonshot CGI",
@@ -45,6 +45,6 @@
         "period": "July 2022 - August 2023",
         "logo": "assets/images/studios/RainbowCG.webp",
         "link": "https://www.rbw-cgi.it/it/rainbow-cgi/",
-        "kind" : "FullTime:OnSite"
+        "kind" : "FullTime: On Site"
     }
 ]

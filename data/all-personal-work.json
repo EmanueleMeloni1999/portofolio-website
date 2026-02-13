@@ -1,26 +1,50 @@
 [
     {
         "id": "ms-workflow",
+        "index": "01",
         "title": "MS Workflow",
         "subtitle": "Rigging Workflow and Tools",
         "description": "A dedicated rigging workflow based on the mGear framework, featuring custom pipeline tools and automation",
-        "image": "assets/images/personal-work/MSWorkflow.webp",
-        "link": ""
+        "image": "assets/images/personal-work/MSWorkflow.webp"
     },
     {
         "id": "moonshot-creatures",
+        "index": "02",
         "title": "Moonshot Creatures",
         "subtitle": "Realistic Creature Rigs",
         "description": "A series of high-end realistic creatures where I served as Rigging Supervisor, overseeing technical quality",
-        "image": "assets/images/personal-work/MoonshotCreatures.webp",
-        "link": ""
+        "image": "assets/images/personal-work/MoonshotCreatures.webp"
     },
     {
         "id": "drogon",
+        "index": "03",
         "title": "Drogon",
         "subtitle": "Wyvern Creature Rig",
         "description": "A feature-rich, fan-made Wyvern rig of Drogon, showcasing advanced deformation and complex control systems",
-        "image": "assets/images/personal-work/Drogon.webp",
-        "link": ""
+        "image": "assets/images/personal-work/Drogon.webp"
+    },
+    {
+        "id": "hiddenstudio",
+        "index": "04",
+        "title": "Alterego",
+        "subtitle": "Assets Rigging - Hidden Interactive",
+        "description": "Alterego is a psychological horror experience built around ethics rather than fear mechanics",
+        "image": "assets/images/personal-work/Alterego.webp"
+    },
+    {
+        "id": "chaosmonger",
+        "index": "05",
+        "title": "Italia 2162",
+        "subtitle": "Assets Rigging - Chaosmonger Studio",
+        "description": "An animated feature film blending adventure, drama, and hope in a visually stunning futuristic Italy",
+        "image": "assets/images/personal-work/Italia2162.webp"
+    },
+    {
+        "id": "luminairi",
+        "index": "06",
+        "title": "Outpost Alpha",
+        "subtitle": "Assets Rigging - Luminairi",
+        "description": "A high-impact sci-fi animated short. Sci-Fi / Action / Mecha",
+        "image": "assets/images/personal-work/OutPostAlpha.webp"
     }
 ]

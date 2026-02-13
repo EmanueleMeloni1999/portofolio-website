@@ -37,13 +37,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                 `;
 
-                // Optional: add click handler for projects with links
-                if (project.link) {
-                    card.style.cursor = "pointer";
-                    card.addEventListener("click", () => {
-                        window.open(project.link, "_blank");
-                    });
-                }
+                // Click handler - navigate to individual project HTML page
+                card.style.cursor = "pointer";
+                card.addEventListener("click", () => {
+                    window.location.href = `projects/${project.id}.html`;
+                });
 
                 container.appendChild(card);
 
