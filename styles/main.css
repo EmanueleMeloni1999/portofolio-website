@@ -338,10 +338,28 @@ section h2 {
     font-size: clamp(0.8rem, 1.5vw, 0.85rem);
     color: var(--text-muted);
     transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.header-right a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
 }
 
 .header-right a:hover {
     color: var(--accent);
+}
+
+.header-right a:hover::after {
+    width: 100%;
 }
 
 
