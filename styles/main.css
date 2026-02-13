@@ -519,7 +519,9 @@ section h2 {
 ===================================================== */
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.75rem 1.5rem;
     border-radius: 30px;
     border: 1px solid var(--accent);
@@ -531,9 +533,21 @@ section h2 {
     text-align: center;
 }
 
+.btn img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 @media (min-width: 768px) {
     .btn {
         padding: 0.8rem 1.8rem;
+    }
+
+    .btn img {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -761,11 +775,29 @@ section h2 {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem 1.5rem;
+    position: relative;
+}
+
+.skills-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    border-radius: 0 0 4px 4px;
 }
 
 @media (min-width: 768px) {
     .skills-section {
         margin-top: 5rem;
+        padding: 3rem 2.5rem;
     }
 }
 
@@ -782,7 +814,7 @@ section h2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -794,7 +826,7 @@ section h2 {
 
 @media (min-width: 768px) {
     .skills-grid {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         gap: 1.2rem;
     }
 }
@@ -1324,6 +1356,15 @@ section h2 {
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-card-label img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
 }
 
 .contact-card a {
