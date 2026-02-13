@@ -149,6 +149,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 card.innerHTML = `
                     <div class="project-image">
+                        ${project.kind ? `<span class="project-kind">${project.kind}</span>` : ''}
                         <img src="${project.image}" alt="${project.title}" loading="lazy">
                         ${project.video ? `
                             <video class="project-video" muted loop playsinline preload="none">
