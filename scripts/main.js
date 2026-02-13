@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     
     // ========================================
-    // PERSONAL PROJECTS
+    // PERSONAL PROJECTS (First 3 only)
     // ========================================
     fetch("data/personal-work.json")
         .then(response => response.json())
@@ -276,7 +276,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const container = document.querySelector(".personal-work-grid");
             if (!container) return;
 
-            projects.forEach((project, index) => {
+            // Show only first 3 projects
+            const displayProjects = projects.slice(0, 3);
+
+            displayProjects.forEach((project, index) => {
                 const card = document.createElement("div");
                 card.classList.add("personal-card");
 
@@ -295,16 +298,29 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                 `;
 
-                // Optional: add click handler for projects with links
-                if (project.link) {
-                    card.style.cursor = "pointer";
-                    card.addEventListener("click", () => {
-                        window.open(project.link, "_blank");
-                    });
-                }
+                // Click handler - navigate to personal-projects.html with project ID
+                card.style.cursor = "pointer";
+                card.addEventListener("click", () => {
+                    if (project.id) {
+                        window.location.href = `personal-projects.html?project=${project.id}`;
+                    } else {
+                        window.location.href = 'personal-projects.html';
+                    }
+                });
 
                 container.appendChild(card);
             });
+
+            // Add "View All Projects" button after the grid
+            const viewAllBtn = document.createElement("a");
+            viewAllBtn.href = "personal-projects.html";
+            viewAllBtn.classList.add("view-all-projects-btn");
+            viewAllBtn.innerHTML = `View All Projects <span class="arrow">→</span>`;
+
+            const personalWorkSection = document.getElementById("personal-work");
+            if (personalWorkSection) {
+                personalWorkSection.appendChild(viewAllBtn);
+            }
         })
         .catch(error => console.error("Personal projects loading error:", error));
 

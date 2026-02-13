@@ -1306,6 +1306,45 @@ section h2 {
     }
 }
 
+/* View All Projects Button */
+.view-all-projects-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+    padding: 0.9rem 2rem;
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 30px;
+    color: var(--accent-soft);
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+.view-all-projects-btn:hover {
+    background: var(--accent);
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.view-all-projects-btn .arrow {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.view-all-projects-btn:hover .arrow {
+    transform: translateX(4px);
+}
+
+@media (min-width: 768px) {
+    .view-all-projects-btn {
+        margin-top: 3rem;
+    }
+}
+
 /* =====================================================
    CONTACT
 ===================================================== */
