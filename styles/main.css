@@ -449,6 +449,7 @@ section h2 {
     text-align: center;
     color: #fff;
     padding: 0 1.5rem;
+    transform: translateY(80px);
 }
 
 .hero-content h2 {
@@ -474,6 +475,7 @@ section h2 {
 .btn-hero {
     border-radius: 8px;
     min-width: 150px;
+    background: #000;
 }
 
 /* Tiger Animation - Responsive */
