@@ -257,6 +257,113 @@ body {
     margin-bottom: 2rem;
 }
 
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.video-grid-item h3 {
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    color: var(--accent-soft);
+    margin-bottom: 0.75rem;
+}
+
+/* =====================================================
+   CREDITS
+===================================================== */
+
+.credits-container {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.credits-container h3 {
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    color: var(--text-titles);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+.credits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .credits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .credits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.credit-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.credit-role {
+    font-size: 0.75rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.credit-name {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* =====================================================
+   TOOL CARD WIDE IMAGE VARIANT
+===================================================== */
+
+.tool-card-wide-img {
+    grid-template-columns: 550px 1fr;
+}
+
+@media (max-width: 767px) {
+    .tool-card-wide-img {
+        grid-template-columns: 1fr;
+    }
+}
+
 .details-gallery {
     display: grid;
     grid-template-columns: 1fr;
@@ -268,6 +375,600 @@ body {
     .details-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* =====================================================
+   OVERVIEW META ROW & TOOLS
+===================================================== */
+
+.project-meta-row {
+    grid-template-columns: 1fr auto !important;
+    gap: 1rem;
+    align-items: start;
+}
+
+.meta-item-fit {
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.overview-tools {
+    margin-top: 0.5rem;
+}
+
+.overview-tools h3 {
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.overview-tools .tech-tags {
+    justify-content: flex-start;
+}
+
+.tech-tags-nowrap {
+    flex-wrap: nowrap;
+}
+
+/* =====================================================
+   SECTION LABELS & INTRO
+===================================================== */
+
+.section-label {
+    display: inline-block;
+    font-size: clamp(0.7rem, 1.2vw, 0.8rem);
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.section-intro {
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    max-width: 700px;
+}
+
+/* =====================================================
+   PROJECT SECTION (alternate bg)
+===================================================== */
+
+.project-section {
+    padding: 4rem 2rem;
+}
+
+@media (min-width: 768px) {
+    .project-section {
+        padding: 6rem 2rem;
+    }
+}
+
+.project-section .details-container h2 {
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
+    color: var(--text-titles);
+    margin-bottom: 1rem;
+}
+
+/* =====================================================
+   PHILOSOPHY BLOCK
+===================================================== */
+
+.philosophy-block {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.philosophy-block h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    color: var(--text-titles);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.philosophy-block p {
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+    color: var(--text-muted);
+    line-height: 1.9;
+}
+
+/* =====================================================
+   TOOL CARDS (legacy)
+===================================================== */
+
+.tool-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: border-color 0.3s ease;
+}
+
+.tool-card:hover {
+    border-color: var(--accent);
+}
+
+@media (min-width: 768px) {
+    .tool-card {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 2.5rem;
+        padding: 2rem;
+        align-items: center;
+    }
+
+    .tool-card-reverse {
+        grid-template-columns: 1fr 1.2fr;
+    }
+
+    .tool-card-reverse .tool-card-image {
+        order: 2;
+    }
+
+    .tool-card-reverse .tool-card-content {
+        order: 1;
+    }
+}
+
+/* =====================================================
+   TOOL CARD GROUPS (image + text, aligned left/right)
+===================================================== */
+
+.tool-card-group {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    max-width: 80%;
+    align-items: center;
+}
+
+.tool-card-align-left {
+    margin-right: auto;
+}
+
+.tool-card-align-right {
+    margin-left: auto;
+    grid-template-columns: 1fr 400px;
+}
+
+.tool-card-align-right .tool-card-image {
+    order: 2;
+}
+
+.tool-card-align-right .tool-card-content {
+    order: 1;
+}
+
+@media (max-width: 767px) {
+    .tool-card-group {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+    }
+}
+
+.tool-card-group .tool-card-image {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tool-card-group .tool-card-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.tool-card-group:hover .tool-card-image img {
+    transform: scale(1.02);
+}
+
+.tool-card-group .tool-card-content {
+    padding: 2rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: border-color 0.3s ease;
+    flex: 1;
+}
+
+.tool-card-group:hover .tool-card-content {
+    border-color: var(--accent);
+}
+
+.tool-separator {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 0 0 3rem;
+}
+
+.tool-card-image {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.tool-card-image img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.tool-card-content h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: var(--accent-soft);
+    margin-bottom: 0.75rem;
+}
+
+.tool-card-content p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+/* =====================================================
+   FEATURES GRID
+===================================================== */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.feature-item {
+    padding: 2rem;
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.feature-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(194, 163, 107, 0.1);
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+}
+
+.feature-item h3 {
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    color: var(--accent-soft);
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* =====================================================
+   PIPELINE FLOW
+===================================================== */
+
+.pipeline-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 2rem 0 3rem;
+}
+
+.pipeline-step {
+    width: 100%;
+    max-width: 600px;
+    padding: 1.5rem 2rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.pipeline-step:hover {
+    border-color: var(--accent);
+}
+
+.step-number {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--bg-dark);
+    background: var(--accent);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.pipeline-step h3 {
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    color: var(--text-titles);
+    margin-bottom: 0.35rem;
+}
+
+.pipeline-step p {
+    font-size: clamp(0.85rem, 1.4vw, 0.9rem);
+    color: var(--text-muted);
+}
+
+.pipeline-connector {
+    width: 2px;
+    height: 24px;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+/* =====================================================
+   CREATURES GRID
+===================================================== */
+
+.creatures-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .creatures-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .creatures-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.creature-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.creature-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+/* Before/After Slider */
+.creature-slider {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: ew-resize;
+}
+
+.creature-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.creature-slider .creature-img-rig {
+    clip-path: inset(0 50% 0 0);
+    z-index: 2;
+}
+
+.creature-slider-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    z-index: 5;
+    transform: translateX(-50%);
+}
+
+.creature-slider-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 1);
+    pointer-events: none;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.creature-slider-handle::before {
+    content: '◂ ▸';
+    font-size: 10px;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.creature-slider input[type="range"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 10;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.creature-slider-labels {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    pointer-events: none;
+    z-index: 4;
+}
+
+.creature-slider-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+}
+
+/* Card Info */
+.creature-info {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.creature-info h3 {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: var(--text-titles);
+    text-align: center;
+}
+
+.creature-role-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: -0.25rem;
+}
+
+.creature-role {
+    display: inline-block;
+    width: fit-content;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.creature-role-rigged {
+    color: var(--accent);
+    background: rgba(194, 163, 107, 0.12);
+    border: 1px solid rgba(194, 163, 107, 0.3);
+}
+
+.creature-role-supervised {
+    color: var(--accent-soft);
+    background: rgba(230, 211, 179, 0.08);
+    border: 1px solid rgba(230, 211, 179, 0.2);
+}
+
+.creature-artist-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.25rem;
+    margin-bottom: -0.25rem;
+}
+
+.creature-credits {
+    font-size: 0.85rem;
+    color: var(--accent-soft);
+    text-align: center;
+}
+
+.btn-purchase {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.55rem 1.2rem;
+    font-size: 0.8rem;
+    color: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    box-sizing: border-box;
+}
+
+.btn-purchase:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #000;
+}
+
+/* =====================================================
+   TECH TAGS
+===================================================== */
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.tech-tag {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    color: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.tech-tag:hover {
+    border-color: var(--accent);
+    background: rgba(194, 163, 107, 0.08);
 }
 
 /* =====================================================

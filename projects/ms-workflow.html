@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MS Workflow - Rigging Workflow and Tools by Emanuele Meloni">
+    <meta name="description" content="Moonshot CGI Rigging Pipeline - A modular creature rigging pipeline by Emanuele Meloni">
 
     <title>MS Workflow - Emanuele Meloni</title>
 
@@ -38,8 +38,8 @@
         <section class="project-hero">
             <div class="project-hero-content">
                 <span class="project-category">Personal Work · 01</span>
-                <h1>MS Workflow</h1>
-                <p class="project-subtitle">Rigging Workflow and Tools</p>
+                <h1>MS-Workflow</h1>
+                <p class="project-subtitle">Modular Creature Rigging Workflow & Tools</p>
             </div>
         </section>
 
@@ -50,39 +50,197 @@
                     <img src="../assets/images/personal-work/MSWorkflow.webp" alt="MS Workflow">
                 </div>
                 <div class="overview-content">
-                    <h2>Overview</h2>
-                    <p>A dedicated rigging workflow based on the mGear framework, featuring custom pipeline tools and automation for production-ready character rigs.</p>
-
-                    <div class="project-meta">
+                    <div class="project-meta project-meta-row">
                         <div class="meta-item">
                             <h3>Role</h3>
                             <p>Pipeline TD / Rigging Developer</p>
                         </div>
-                        <div class="meta-item">
-                            <h3>Tools Used</h3>
-                            <p>Maya, Python, mGear, Qt</p>
-                        </div>
-                        <div class="meta-item">
+                        <div class="meta-item meta-item-fit">
                             <h3>Year</h3>
-                            <p>2024</p>
+                            <p>2026</p>
+                        </div>
+                    </div>
+
+                    <p>A comprehensive, modular creature rigging pipeline developed for Moonshot CGI. Built upon the mGear framework, it features an extensive suite of custom Python tools and a fully procedural workflow designed to streamline the rigging process for various asset types.</p>
+
+                    <div class="overview-tools">
+                        <h3>Tools Used</h3>
+                        <div class="tech-tags tech-tags-nowrap">
+                            <span class="tech-tag">Maya</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">mGear</span>
+                            <span class="tech-tag">PySide</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">ngSkinTool</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Project Details -->
+        <!-- Core Philosophy -->
         <section class="project-details">
             <div class="details-container">
-                <h2>Project Details</h2>
-                <p>This section will contain detailed information about the project, technical challenges, solutions, and results.</p>
-
-                <!-- Add more images, videos, breakdowns here -->
-                <div class="details-gallery">
-                    <!-- Images will go here -->
+                <div class="philosophy-block">
+                    <span class="section-label">Core Philosophy</span>
+                    <h2>Disposable Rigs. Infinite Iterations.</h2>
+                    <p>The pipeline emphasizes a non-destructive, "disposable" workflow where rigs are generated temporarily and can be fully rebuilt from scratch with a single click. This ensures consistency and flexibility, allowing for rapid iteration and updates without data loss.</p>
                 </div>
             </div>
         </section>
+
+        <!-- Key Features & Tools -->
+        <section class="project-section">
+            <div class="details-container">
+                <span class="section-label">Key Features & Tools</span>
+                <h2>Custom Toolset</h2>
+                <p class="section-intro">A dedicated Maya shelf featuring proprietary tools, each designed to handle a critical stage of the rigging pipeline.</p>
+
+                <!-- Tool Card: Rig Manager -->
+                <div class="tool-card-group tool-card-align-left">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/msworkflow_rigmanger.png" alt="Rig Manager">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Rig Manager</h3>
+                        <p>The central hub for managing assets, environment variables, and guide versions. From here, every aspect of the rig's lifecycle is controlled — from initial setup to final build.</p>
+                    </div>
+                </div>
+
+                <hr class="tool-separator">
+
+                <!-- Tool Card: Python Step Manager -->
+                <div class="tool-card-group tool-card-align-right">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/msworkflow_stepmanager.png" alt="Python Step Manager">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Python Step Manager</h3>
+                        <p>A standardized execution sequence engine that orchestrates Pre/Post custom scripts, ensuring every build follows the same procedural steps and produces identical, production-ready results.</p>
+                    </div>
+                </div>
+
+                <hr class="tool-separator">
+
+                <!-- Tool Card: Skin Manager -->
+                <div class="tool-card-group tool-card-align-left">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/msworkflow_skinmanager.png" alt="Skin Manager">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Skin & Deformer Managers</h3>
+                        <p>Advanced utilities for exporting and importing skin weights with full ngSkinTools integration. Handles complex deformer stacks, Delta Mush workflows for realistic skin sliding, and NURBS-based corrective blendshapes.</p>
+                    </div>
+                </div>
+
+                <hr class="tool-separator">
+
+                <!-- Tool Card: Skeleton Creator -->
+                <div class="tool-card-group tool-card-align-right">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/msworkflow_skeletoncreator.png" alt="Skeleton Creator">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Skeleton Creator</h3>
+                        <p>Automates the creation, orientation, and skinning of driver joints for geometric bones. Eliminates repetitive manual work and guarantees consistent skeleton hierarchies across different creature types.</p>
+                    </div>
+                </div>
+
+                <hr class="tool-separator">
+
+                <!-- Tool Card: Deformer I/O -->
+                <div class="tool-card-group tool-card-align-left">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/msworkflow_deformerio.png" alt="Deformer I/O">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Deformer I/O</h3>
+                        <p>A robust system for serializing and deserializing deformer data. Manages the complete deformer stack, enabling seamless export and import of complex deformation setups across different rig iterations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facial Rigging & Advanced Systems -->
+        <section class="project-details">
+            <div class="details-container">
+                <span class="section-label">Advanced Systems</span>
+                <h2>Facial Rigging & Deformation</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 20c0-4 3-7 7-7s7 3 7 7"/></svg>
+                        </div>
+                        <h3>Eye Rigger</h3>
+                        <p>Procedural generation of eyelid and brow mechanics, including proxy eyeball management for realistic eye articulation.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                        </div>
+                        <h3>Lips Builder</h3>
+                        <p>Automated construction of complex mouth rigs with custom control shapes, enabling nuanced lip sync and expression control.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3>RBF Manager</h3>
+                        <p>Custom Radial Basis Function tool for driving corrective blendshapes and complex pose-space deformations.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18"/><path d="M8 6l4-3 4 3"/><path d="M4 12h16"/><path d="M6 18h12"/></svg>
+                        </div>
+                        <h3>Tongue Setup</h3>
+                        <p>Automated tongue rig construction with FK/IK blending, custom control shapes, and proper deformation falloff.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Architecture -->
+        <section class="project-section">
+            <div class="details-container">
+                <span class="section-label">Architecture</span>
+                <h2>Procedural Pipeline</h2>
+                <p class="section-intro">The system utilizes a standardized folder structure and execution sequence to ensure every build is identical and production-ready.</p>
+
+                <div class="pipeline-flow">
+                    <div class="pipeline-step">
+                        <span class="step-number">01</span>
+                        <h3>Guides Placement</h3>
+                        <p>Initial mGear guide positioning and configuration for the target creature.</p>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-step">
+                        <span class="step-number">02</span>
+                        <h3>Rig Build</h3>
+                        <p>Automated rig generation with Pre/Post custom scripts execution.</p>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-step">
+                        <span class="step-number">03</span>
+                        <h3>Skinning & Deformation</h3>
+                        <p>Weight painting, deformer stacks, and Delta Mush integration.</p>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-step">
+                        <span class="step-number">04</span>
+                        <h3>FACS & Correctives</h3>
+                        <p>Facial Action Coding System and RBF-driven corrective shapes.</p>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-step">
+                        <span class="step-number">05</span>
+                        <h3>Muscle Skinning</h3>
+                        <p>Final pass with muscle deformation for realistic creature motion.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
 </body>

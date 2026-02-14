@@ -454,4 +454,65 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // ── SHOWREEL MODAL ──────────────────────────────────
+    const reelPass = 'EmanueleMeloni2026Reel';
+    const reelVideoId = 'yk6dA3tnU8g';
+    const reelModal = document.getElementById('showreelModal');
+    const reelInput = document.getElementById('showreelInput');
+    const reelSubmit = document.getElementById('showreelSubmit');
+    const reelError = document.getElementById('showreelError');
+    const reelClose = document.getElementById('showreelClose');
+    const reelPasswordSection = document.getElementById('showreelPassword');
+    const reelPlayerSection = document.getElementById('showreelPlayer');
+    const reelIframe = document.getElementById('showreelIframe');
+
+    function openReelModal() {
+        reelModal.classList.add('active');
+        reelInput.focus();
+    }
+
+    function closeReelModal() {
+        reelModal.classList.remove('active');
+        reelInput.value = '';
+        reelError.classList.remove('visible');
+        reelPasswordSection.style.display = '';
+        reelPlayerSection.classList.remove('active');
+        reelIframe.src = '';
+    }
+
+    function submitReelPassword() {
+        if (reelInput.value === reelPass) {
+            reelPasswordSection.style.display = 'none';
+            reelPlayerSection.classList.add('active');
+            reelIframe.src = `https://www.youtube.com/embed/${reelVideoId}?autoplay=1`;
+        } else {
+            reelError.classList.add('visible');
+            reelInput.value = '';
+            reelInput.focus();
+        }
+    }
+
+    document.querySelectorAll('.showreel-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openReelModal();
+        });
+    });
+
+    reelSubmit.addEventListener('click', submitReelPassword);
+
+    reelInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') submitReelPassword();
+    });
+
+    reelClose.addEventListener('click', closeReelModal);
+
+    reelModal.addEventListener('click', (e) => {
+        if (e.target === reelModal) closeReelModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && reelModal.classList.contains('active')) closeReelModal();
+    });
+
 });

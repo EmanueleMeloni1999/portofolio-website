@@ -15,6 +15,9 @@
 
     <!-- Navigation Script -->
     <script src="../scripts/project-navigation.js"></script>
+
+    <!-- Creatures Loader -->
+    <script src="../scripts/creatures-loader.js"></script>
 </head>
 <body>
 
@@ -50,39 +53,45 @@
                     <img src="../assets/images/personal-work/MoonshotCreatures.webp" alt="Moonshot Creatures">
                 </div>
                 <div class="overview-content">
-                    <h2>Overview</h2>
-                    <p>A series of high-end realistic creatures where I served as Rigging Supervisor, overseeing technical quality and ensuring production-ready character rigs.</p>
-
-                    <div class="project-meta">
+                    <div class="project-meta project-meta-row">
                         <div class="meta-item">
                             <h3>Role</h3>
-                            <p>Rigging Supervisor</p>
+                            <p>Rigging Supervisor / Character Rigger</p>
                         </div>
-                        <div class="meta-item">
-                            <h3>Tools Used</h3>
-                            <p>Maya, Python, mGear</p>
-                        </div>
-                        <div class="meta-item">
+                        <div class="meta-item meta-item-fit">
                             <h3>Year</h3>
-                            <p>2023-2024</p>
+                            <p>2025 - 2026</p>
+                        </div>
+                    </div>
+
+                    <p>A collection of 15 high-end realistic creature rigs developed at Moonshot CGI. As Rigging Supervisor, I led the technical direction and quality standards for all assets, while personally rigging several creatures and mentoring the team through the production pipeline.</p>
+
+                    <div class="overview-tools">
+                        <h3>Tools Used</h3>
+                        <div class="tech-tags tech-tags-nowrap">
+                            <span class="tech-tag">Maya</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">mGear</span>
+                            <span class="tech-tag">ngSkinTool</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Project Details -->
-        <section class="project-details">
+        <!-- Creatures Grid -->
+        <section class="project-section">
             <div class="details-container">
-                <h2>Project Details</h2>
-                <p>This section will contain detailed information about the project, technical challenges, solutions, and results.</p>
+                <span class="section-label">Assets</span>
+                <h2>Creature Library</h2>
+                <p class="section-intro">Each creature was built using the MS-Workflow pipeline, ensuring consistency, quality, and production-ready rigs across the entire library.</p>
 
-                <!-- Add more images, videos, breakdowns here -->
-                <div class="details-gallery">
-                    <!-- Images will go here -->
+                <div class="creatures-grid" id="creatures-grid">
+                    <!-- Cards loaded from data/creatures.json -->
                 </div>
             </div>
         </section>
+
     </main>
 
 </body>

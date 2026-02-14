@@ -50,7 +50,7 @@
             <h2>Emanuele Meloni</h2>
             <p>3D Rigger · Pipeline TD · Technical Animator</p>
             <div class="hero-buttons">
-                <a href="assets/documents/Reel.mp4" class="btn btn-hero">
+                <a href="#" class="btn btn-hero showreel-btn">
                     <img src="assets/images/icons/video.webp" alt="">
                     Show Reel
                 </a>
@@ -131,7 +131,7 @@
 
         <!-- CTA BUTTONS -->
         <div class="cta-buttons">
-            <a href="assets/documents/CV.pdf" class="btn">
+            <a href="assets/documents/CV.pdf" target="_blank" class="btn">
                 <img src="assets/images/icons/cv.webp" alt="">
                 Download CV
             </a>
@@ -139,11 +139,11 @@
                 <img src="assets/images/icons/linkedin.webp" alt="">
                 LinkedIn
             </a>
-            <a href="https://www.imdb.com/" target="_blank" class="btn">
+            <a href="https://www.imdb.com/it/name/nm14947573/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_emanuele%2520meloni" target="_blank" class="btn">
                 <img src="assets/images/icons/imdb.webp" alt="">
                 IMDb
             </a>
-            <a href="assets/documents/Reel.mp4" class="btn">
+            <a href="#" class="btn showreel-btn">
                 <img src="assets/images/icons/video.webp" alt="">
                 ShowReel
             </a>
@@ -257,6 +257,26 @@
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
+
+    <!-- SHOWREEL MODAL -->
+    <div class="showreel-overlay" id="showreelModal">
+        <div class="showreel-modal">
+            <button class="showreel-close" id="showreelClose">&times;</button>
+            <div class="showreel-password" id="showreelPassword">
+                <h3>Enter Password</h3>
+                <div class="showreel-input-group">
+                    <input type="password" id="showreelInput" placeholder="Password" autocomplete="off">
+                    <button class="btn showreel-submit" id="showreelSubmit">Play</button>
+                </div>
+                <p class="showreel-error" id="showreelError">Incorrect password</p>
+            </div>
+            <div class="showreel-player" id="showreelPlayer">
+                <div class="video-responsive">
+                    <iframe id="showreelIframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- SCRIPT -->
     <script src="scripts/main.js"></script>

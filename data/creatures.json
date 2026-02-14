@@ -1,0 +1,122 @@
+[
+    {
+        "asset": "Antelope",
+        "status": "rigged",
+        "artists": "Emanuele Meloni",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Dolphin",
+        "status": "rigged",
+        "artists": "Emanuele Meloni",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Elephant",
+        "status": "rigged",
+        "artists": "Emanuele Meloni",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Fennec",
+        "status": "supervised",
+        "artists": "Chiara Sanasi",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Hippo",
+        "status": "supervised",
+        "artists": "Gioachino Cassato, Matilde De Giuseppe",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Komodo",
+        "status": "rigged",
+        "artists": "Emanuele Meloni, Valentin Procida",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Moose",
+        "status": "supervised",
+        "artists": "Andrea Montagner",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Mouse",
+        "status": "rigged",
+        "artists": "Emanuele Meloni, Leonardo Franci",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Pig",
+        "status": "supervised",
+        "artists": "Matilde De Giuseppe",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Rhino",
+        "status": "supervised",
+        "artists": "Chiara Sanasi",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Sheep",
+        "status": "supervised",
+        "artists": "Andrea Montagner",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Squirrel",
+        "status": "supervised",
+        "artists": "Gioachino Cassato",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Tiger",
+        "status": "rigged",
+        "artists": "Emanuele Meloni, Valentin Procida",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Wolf",
+        "status": "supervised",
+        "artists": "Leonardo Franci",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    },
+    {
+        "asset": "Octopus",
+        "status": "supervised",
+        "artists": "Leonardo Franci",
+        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
+        "rig": "../assets/images/personal-work/Drogon.webp",
+        "link": "#"
+    }
+]
