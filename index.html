@@ -231,17 +231,22 @@
             </div>
         </div>
 
-        <!-- Form -->
+        <!-- Form (Web3Forms) -->
         <div class="contact-form-wrapper">
-            <form class="contact-form" action="#" method="post">
+            <form class="contact-form" id="contactForm">
+                <input type="hidden" name="access_key" value="a7a6bca9-353d-4b54-9846-dbc4989c1f97">
+                <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                <input type="checkbox" name="botcheck" style="display: none;">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <input type="text" name="subject" placeholder="Subject" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">
+                <button type="submit" class="btn" id="contactSubmitBtn">
                     <img src="assets/images/icons/sendmessage.webp" alt="">
-                    Send Message
+                    <span>Send Message</span>
                 </button>
+                <p class="contact-feedback contact-success" id="contactSuccess">Message sent successfully!</p>
+                <p class="contact-feedback contact-error" id="contactError">Something went wrong. Please try again.</p>
             </form>
         </div>
     </section>

@@ -515,4 +515,50 @@ document.addEventListener("DOMContentLoaded", function() {
         if (e.key === 'Escape' && reelModal.classList.contains('active')) closeReelModal();
     });
 
+    // ========================================
+    // CONTACT FORM (Web3Forms)
+    // ========================================
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('contactSubmitBtn');
+            const successMsg = document.getElementById('contactSuccess');
+            const errorMsg = document.getElementById('contactError');
+            const btnText = submitBtn.querySelector('span');
+
+            // Hide previous feedback
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+
+            // Loading state
+            btnText.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(contactForm);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+                if (data.success) {
+                    successMsg.style.display = 'block';
+                    contactForm.reset();
+                } else {
+                    errorMsg.style.display = 'block';
+                }
+            })
+            .catch(function () {
+                errorMsg.style.display = 'block';
+            })
+            .finally(function () {
+                btnText.textContent = 'Send Message';
+                submitBtn.disabled = false;
+            });
+        });
+    }
+
 });
