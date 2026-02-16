@@ -1,0 +1,14 @@
+{
+  "name": "emanuele-meloni-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website with secure showreel authentication",
+  "scripts": {
+    "generate-hash": "node generate-password-hash.js"
+  },
+  "keywords": ["portfolio", "3d-rigging", "technical-artist"],
+  "author": "Emanuele Meloni",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,36 @@
+# ═══════════════════════════════════════════════════════════
+# Portfolio Website - Git Ignore
+# ═══════════════════════════════════════════════════════════
+
+# Environment Variables (CRITICO - non committare mai!)
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel
+
+# Node modules (se aggiungi dipendenze in futuro)
+node_modules/
+package-lock.json
+yarn.lock
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Temporary files
+.tmp/
+temp/
+*.tmp
