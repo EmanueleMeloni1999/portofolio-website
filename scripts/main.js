@@ -455,8 +455,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ── SHOWREEL MODAL ──────────────────────────────────
-    const reelPass = 'EmanueleMeloni2026Reel';
-    const reelVideoId = 'yk6dA3tnU8g';
     const reelModal = document.getElementById('showreelModal');
     const reelInput = document.getElementById('showreelInput');
     const reelSubmit = document.getElementById('showreelSubmit');
@@ -475,20 +473,56 @@ document.addEventListener("DOMContentLoaded", function() {
         reelModal.classList.remove('active');
         reelInput.value = '';
         reelError.classList.remove('visible');
+        reelError.textContent = 'Incorrect password';
         reelPasswordSection.style.display = '';
         reelPlayerSection.classList.remove('active');
         reelIframe.src = '';
+        reelSubmit.disabled = false;
     }
 
-    function submitReelPassword() {
-        if (reelInput.value === reelPass) {
-            reelPasswordSection.style.display = 'none';
-            reelPlayerSection.classList.add('active');
-            reelIframe.src = `https://www.youtube.com/embed/${reelVideoId}?autoplay=1`;
-        } else {
+    async function submitReelPassword() {
+        const password = reelInput.value.trim();
+
+        if (!password) {
+            reelError.textContent = 'Please enter a password';
             reelError.classList.add('visible');
-            reelInput.value = '';
-            reelInput.focus();
+            return;
+        }
+
+        // Disable button durante la richiesta
+        reelSubmit.disabled = true;
+        reelError.classList.remove('visible');
+
+        try {
+            // Chiama l'API serverless
+            const response = await fetch('/api/verify-showreel', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ password })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Password corretta - mostra video
+                reelPasswordSection.style.display = 'none';
+                reelPlayerSection.classList.add('active');
+                reelIframe.src = data.videoUrl;
+            } else {
+                // Password errata o rate limit
+                reelError.textContent = data.error || 'Incorrect password';
+                reelError.classList.add('visible');
+                reelInput.value = '';
+                reelInput.focus();
+                reelSubmit.disabled = false;
+            }
+        } catch (error) {
+            console.error('Error verifying password:', error);
+            reelError.textContent = 'Connection error. Please try again.';
+            reelError.classList.add('visible');
+            reelSubmit.disabled = false;
         }
     }
 
