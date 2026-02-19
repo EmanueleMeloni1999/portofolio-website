@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // ========================================
     // PERSONAL PROJECTS (First 3 only)
     // ========================================
-    fetch("data/personal-work.json")
+    fetch("data/all-personal-work.json")
         .then(response => response.json())
         .then(projects => {
             const container = document.querySelector(".personal-work-grid");
@@ -453,101 +453,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     }
-
-    // ── SHOWREEL MODAL ──────────────────────────────────
-    const reelModal = document.getElementById('showreelModal');
-    const reelInput = document.getElementById('showreelInput');
-    const reelSubmit = document.getElementById('showreelSubmit');
-    const reelError = document.getElementById('showreelError');
-    const reelClose = document.getElementById('showreelClose');
-    const reelPasswordSection = document.getElementById('showreelPassword');
-    const reelPlayerSection = document.getElementById('showreelPlayer');
-    const reelIframe = document.getElementById('showreelIframe');
-
-    function openReelModal() {
-        reelModal.classList.add('active');
-        reelInput.focus();
-    }
-
-    function closeReelModal() {
-        reelModal.classList.remove('active');
-        reelInput.value = '';
-        reelError.classList.remove('visible');
-        reelError.textContent = 'Incorrect password';
-        reelPasswordSection.style.display = '';
-        reelPlayerSection.classList.remove('active');
-        reelIframe.src = '';
-        reelSubmit.disabled = false;
-    }
-
-    async function submitReelPassword() {
-        const password = reelInput.value.trim();
-
-        if (!password) {
-            reelError.textContent = 'Please enter a password';
-            reelError.classList.add('visible');
-            return;
-        }
-
-        // Disable button durante la richiesta
-        reelSubmit.disabled = true;
-        reelError.classList.remove('visible');
-
-        try {
-            // Chiama l'API serverless
-            const response = await fetch('/api/verify-showreel', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ password })
-            });
-
-            const data = await response.json();
-
-            if (data.success) {
-                // Password corretta - mostra video
-                reelPasswordSection.style.display = 'none';
-                reelPlayerSection.classList.add('active');
-                reelIframe.src = data.videoUrl;
-            } else {
-                // Password errata o rate limit
-                reelError.textContent = data.error || 'Incorrect password';
-                reelError.classList.add('visible');
-                reelInput.value = '';
-                reelInput.focus();
-                reelSubmit.disabled = false;
-            }
-        } catch (error) {
-            console.error('Error verifying password:', error);
-            reelError.textContent = 'Connection error. Please try again.';
-            reelError.classList.add('visible');
-            reelSubmit.disabled = false;
-        }
-    }
-
-    document.querySelectorAll('.showreel-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            openReelModal();
-        });
-    });
-
-    reelSubmit.addEventListener('click', submitReelPassword);
-
-    reelInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') submitReelPassword();
-    });
-
-    reelClose.addEventListener('click', closeReelModal);
-
-    reelModal.addEventListener('click', (e) => {
-        if (e.target === reelModal) closeReelModal();
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && reelModal.classList.contains('active')) closeReelModal();
-    });
 
     // ========================================
     // CONTACT FORM (Web3Forms)

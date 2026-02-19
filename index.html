@@ -33,6 +33,7 @@
         <nav class="header-right">
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#showreel">ShowReel</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#career">Career</a></li>
                 <li><a href="#teaching">Teaching</a></li>
@@ -50,7 +51,7 @@
             <h2>Emanuele Meloni</h2>
             <p>3D Rigger · Pipeline TD · Technical Animator</p>
             <div class="hero-buttons">
-                <a href="#" class="btn btn-hero showreel-btn">
+                <a href="#showreel" class="btn btn-hero">
                     <img src="assets/images/icons/video.webp" alt="">
                     Show Reel
                 </a>
@@ -143,10 +144,6 @@
                 <img src="assets/images/icons/imdb.webp" alt="">
                 IMDb
             </a>
-            <a href="#" class="btn showreel-btn">
-                <img src="assets/images/icons/video.webp" alt="">
-                ShowReel
-            </a>
         </div>
 
         <!-- CORE SKILLS -->
@@ -165,6 +162,28 @@
         <span class="sep-diamond"></span>
         <span class="sep-line"></span>
     </div>
+
+    <!-- SHOWREEL -->
+    <section id="showreel" class="showreel-section">
+        <h2>ShowReel</h2>
+        <div class="showreel-video-wrapper">
+            <div class="showreel-video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+                    title="Emanuele Meloni - ShowReel"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <p class="showreel-credits">
+            Credits, special thanks and additional info will go here.
+        </p>
+    </section>
+
+    <!-- SECTION SEPARATOR: ShowReel → Projects -->
+    <div class="section-separator"></div>
 
     <!-- PROJECTS -->
     <section id="projects" class="projects">
@@ -262,26 +281,6 @@
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
-
-    <!-- SHOWREEL MODAL -->
-    <div class="showreel-overlay" id="showreelModal">
-        <div class="showreel-modal">
-            <button class="showreel-close" id="showreelClose">&times;</button>
-            <div class="showreel-password" id="showreelPassword">
-                <h3>Enter Password</h3>
-                <div class="showreel-input-group">
-                    <input type="password" id="showreelInput" placeholder="Password" autocomplete="off">
-                    <button class="btn showreel-submit" id="showreelSubmit">Play</button>
-                </div>
-                <p class="showreel-error" id="showreelError">Incorrect password</p>
-            </div>
-            <div class="showreel-player" id="showreelPlayer">
-                <div class="video-responsive">
-                    <iframe id="showreelIframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- SCRIPT -->
     <script src="scripts/main.js"></script>
