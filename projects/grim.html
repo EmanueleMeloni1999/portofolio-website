@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grim.exe Rig - A complete character rig from Unreal Engine asset by Emanuele Meloni">
+
+    <title>Grim.exe Rig - Emanuele Meloni</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="../assets/images/icons/logo.webp">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/project-detail.css">
+
+    <!-- Navigation Script -->
+    <script src="../scripts/project-navigation.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="project-nav">
+        <div class="nav-left">
+            <!-- Previous project link will be added by JS -->
+        </div>
+        <div class="nav-center">
+            <a href="../index.html#personal-work" class="nav-link">Back to Portfolio</a>
+            <a href="../personal-projects.html" class="nav-link">All Projects</a>
+        </div>
+        <div class="nav-right">
+            <!-- Next project link will be added by JS -->
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="project-detail">
+        <!-- Hero Section -->
+        <section class="project-hero">
+            <div class="project-hero-content">
+                <span class="project-category">Personal Work · 07</span>
+                <h1>Grim.exe Rig</h1>
+                <p class="project-subtitle">Robot Rig</p>
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="project-overview">
+            <div class="overview-container">
+                <div class="overview-image">
+                    <img src="../assets/images/personal-work/Grim.png" alt="Grim.exe Rig">
+                </div>
+                <div class="overview-content">
+                    <div class="project-meta project-meta-row">
+                        <div class="meta-item">
+                            <h3>Role</h3>
+                            <p>Character TD / Rigger</p>
+                        </div>
+                        <div class="meta-item meta-item-fit">
+                            <h3>Year</h3>
+                            <p>2026</p>
+                        </div>
+                    </div>
+
+                    <p>A complete character rig built from an Unreal Engine Skeletal Mesh. The project covers the full pipeline from asset extraction and cleanup, through mGear guide placement and rig build, to final animation testing and engine re-integration.</p>
+
+                    <div class="overview-tools">
+                        <h3>Tools Used</h3>
+                        <div class="tech-tags tech-tags-nowrap">
+                            <span class="tech-tag">Maya</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">mGear</span>
+                            <span class="tech-tag">Unreal Engine</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Source & Download -->
+        <section class="project-details">
+            <div class="details-container">
+                <div class="video-grid">
+                    <!-- Original Asset (Fab) -->
+                    <div class="video-grid-item" style="text-align: center;">
+                        <h3>Original Asset</h3>
+                        <div style="border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 1rem;">
+                            <img src="../assets/images/personal-work/Grim/Grim_Fab_preview.png" alt="Grim.exe on Fab" style="width: 100%; display: block;">
+                        </div>
+                        <p style="color: var(--text-muted); font-size: clamp(0.85rem, 1.4vw, 0.95rem); margin-bottom: 1rem;">The base model was sourced from this Fab listing</p>
+                        <a href="https://www.fab.com/listings/75578197-6f11-4839-8b9f-88009839e1eb" target="_blank" class="btn-purchase">View on Fab</a>
+                    </div>
+                    <!-- Download Rig (Gumroad) -->
+                    <div class="video-grid-item" style="text-align: center;">
+                        <h3>Download Rig</h3>
+                        <div style="border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 1rem;">
+                            <img src="../assets/images/personal-work/Grim/Grim_Fab_preview.png" alt="Grim.exe Rig Download" style="width: 100%; display: block;">
+                        </div>
+                        <p style="color: var(--text-muted); font-size: clamp(0.85rem, 1.4vw, 0.95rem); margin-bottom: 1rem;">Download the complete rig for free</p>
+                        <span class="btn-purchase" style="opacity: 0.5; pointer-events: none; cursor: default;">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Asset Preparation -->
+        <section class="project-details">
+            <div class="details-container">
+                <span class="section-label">Asset Preparation</span>
+                <h2>From Unreal to Maya</h2>
+                <p>The model was sourced directly from Unreal Engine as a Skeletal Mesh and exported as FBX. The resulting triangulated, single-shape mesh required extensive cleanup: separating components, planning the joint hierarchy, and creating quad-based proxy meshes for organic deformation.</p>
+
+                <!-- Old Model -->
+                <div class="tool-card-group tool-card-align-left">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/Grim/Grim_Old_Model.png" alt="Original Unreal Export">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Unreal Export</h3>
+                        <p>The original Skeletal Mesh exported from Unreal Engine. A single triangulated shape containing all character components combined together.</p>
+                    </div>
+                </div>
+
+                <hr class="tool-separator">
+
+                <!-- Clean Hierarchy -->
+                <div class="tool-card-group tool-card-align-right" style="grid-template-columns: 1fr 280px;">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/Grim/Grim_Clean_Hierachy.png" alt="Clean Hierarchy">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Mesh Cleanup & Hierarchy</h3>
+                        <p>Components separated and grouped according to the rig's requirements. This phase allowed drafting a preliminary joint list and provided a clear overview of the project scope.</p>
+                    </div>
+                </div>
+
+                <hr class="tool-separator">
+
+                <!-- Proxy Meshes -->
+                <div class="tool-card-group tool-card-align-left">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/Grim/Grim_Proxy_meshes.png" alt="Proxy Meshes">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Proxy Meshes</h3>
+                        <p>Quad-based proxy meshes created for sections requiring organic deformation, such as the spine, cables, and arms. Essential for precise skinning and smooth deformation.</p>
+                    </div>
+                </div>
+
+                <hr class="tool-separator">
+
+                <!-- Model Check -->
+                <div class="tool-card-group tool-card-align-right">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/Grim/Grim_Model_Check.png" alt="Model Check Tool">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Quality Control</h3>
+                        <p>A custom model-checking tool ensures the asset meets all technical standards: frozen transformations, zeroed pivots, removal of namespaces, and clean construction history.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materials Baking -->
+        <section class="project-section">
+            <div class="details-container">
+                <span class="section-label">Materials</span>
+                <h2>Texture Baking & Preview</h2>
+                <p class="section-intro">Since the original materials were procedural shaders built in Unreal Engine, a baking process was performed to generate standard texture maps for high-fidelity preview in Maya.</p>
+
+                <!-- Unreal Material -->
+                <div class="tool-card-group tool-card-align-left">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/Grim/Grim_Material_Unreal_To_Extract.png" alt="Unreal Material Construction">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Unreal Shader Analysis</h3>
+                        <p>Procedural shader networks identified and prepared for baking. Each material channel was mapped to ensure accurate texture extraction from the engine.</p>
+                    </div>
+                </div>
+
+                <hr class="tool-separator">
+
+                <!-- Exported Textures -->
+                <div class="tool-card-group tool-card-align-right">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/Grim/Grim_Exported_Textures.png" alt="Exported Textures">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Baked Textures</h3>
+                        <p>Standard texture maps generated from the procedural shaders, providing animators with an accurate visual reference during the rigging and animation workflow.</p>
+                    </div>
+                </div>
+
+                <hr class="tool-separator">
+
+                <!-- Materials Applied -->
+                <div class="tool-card-group tool-card-align-left">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/Grim/Grim_Materials_Applied.png" alt="Materials Applied in Maya">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Maya Preview</h3>
+                        <p>Baked textures applied in Maya, giving a high-fidelity visual preview essential for accurate animation work and professional quality control.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pipeline -->
+        <section class="project-details">
+            <div class="details-container">
+                <span class="section-label">Pipeline</span>
+                <h2>Rigging Process</h2>
+                <p>The rigging process followed a structured and iterative pipeline leveraging custom automation tools, mGear guide templates, and a standardized directory structure to ensure technical compliance and high-quality deformations.</p>
+
+                <div class="pipeline-flow">
+                    <div class="pipeline-step">
+                        <span class="step-number">01</span>
+                        <h3>Guide Placement</h3>
+                        <p>Primary mGear guide positioning and control shape customization on the target character.</p>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-step">
+                        <span class="step-number">02</span>
+                        <h3>Rig Build</h3>
+                        <p>Automated rig generation with Pre/Post custom scripts through the pipeline tools.</p>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-step">
+                        <span class="step-number">03</span>
+                        <h3>Primary Skinning</h3>
+                        <p>Base deformations established with skin weight influence strictly capped at 4 for engine compatibility.</p>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-step">
+                        <span class="step-number">04</span>
+                        <h3>Secondary Controls & Features</h3>
+                        <p>Weapon support system, cables, spine mechanics, and extra feature implementation.</p>
+                    </div>
+                    <div class="pipeline-connector"></div>
+                    <div class="pipeline-step">
+                        <span class="step-number">05</span>
+                        <h3>Validation & Export</h3>
+                        <p>Animation testing, control picker creation, and Skeletal Mesh export to Unreal Engine.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rig & Features -->
+        <section class="project-section">
+            <div class="details-container">
+                <span class="section-label">Rig Features</span>
+                <h2>Control Systems & Features</h2>
+                <p class="section-intro">A comprehensive IK system, pre-configured easy poses, RBF-driven correctives, dynamic wires, full weapon integration with space switches, and a dedicated control picker.</p>
+
+                <!-- Guides -->
+                <div class="tool-card-group tool-card-align-left">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/Grim/Grim_Guides.png" alt="mGear Guides">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>mGear Guides</h3>
+                        <p>The mGear guide template built directly onto the model, serving as the blueprint for the final rig with precise control over joint placement and behavior.</p>
+                    </div>
+                </div>
+
+                <hr class="tool-separator">
+
+                <!-- Rig Overview -->
+                <div class="tool-card-group tool-card-align-right" style="grid-template-columns: 1fr 550px;">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/Grim/Grim_Rig.png" alt="Grim Rig Overview">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Rig Overview</h3>
+                        <p>Full character rig with IK/FK switching on limbs and spine, space switching on weapons and head, and custom control shapes designed for intuitive animator interaction.</p>
+                    </div>
+                </div>
+
+                <hr class="tool-separator">
+
+                <!-- Picker -->
+                <div class="tool-card-group tool-card-align-left">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/Grim/Grim_Picker.png" alt="Control Picker">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Control Picker</h3>
+                        <p>A dedicated picker interface for quick selection of all body and weapon controls. Organized for efficient animator workflow with clear visual feedback.</p>
+                    </div>
+                </div>
+
+                <hr class="tool-separator">
+
+                <!-- Skeletal Mesh -->
+                <div class="tool-card-group tool-card-align-right">
+                    <div class="tool-card-image">
+                        <img src="../assets/images/personal-work/Grim/Grim_Skeletal_Mesh.png" alt="Skeletal Mesh Export">
+                    </div>
+                    <div class="tool-card-content">
+                        <h3>Skeletal Mesh</h3>
+                        <p>Final Skeletal Mesh exported and re-imported into Unreal Engine, maintaining full compatibility with the engine's animation system and 4-influence skin limit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Videos -->
+        <section class="project-details">
+            <div class="details-container">
+                <span class="section-label">Breakdowns</span>
+                <h2>Feature Showcase</h2>
+
+                <div class="video-grid">
+                    <div class="video-grid-item">
+                        <h3>Chest Mechanism</h3>
+                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
+                            <source src="../assets/videos/personal-projects/Grim/Grim_Chest_Feature.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-grid-item">
+                        <h3>RBF Shoulder</h3>
+                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
+                            <source src="../assets/videos/personal-projects/Grim/Grim_rbf_feature.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-grid-item">
+                        <h3>Dynamic Wires</h3>
+                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
+                            <source src="../assets/videos/personal-projects/Grim/Grim_DynamicWire_Feature.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-grid-item">
+                        <h3>Picker Example</h3>
+                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
+                            <source src="../assets/videos/personal-projects/Grim/Grim_Picker_Example.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animation & Unreal -->
+        <section class="project-section">
+            <div class="details-container">
+                <span class="section-label">Animation</span>
+                <h2>Animation Tests & Engine Integration</h2>
+
+                <div class="video-grid">
+                    <div class="video-grid-item">
+                        <h3>Rig Building</h3>
+                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
+                            <source src="../assets/videos/personal-projects/Grim/Grim_Building.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-grid-item">
+                        <h3>Maya Animation</h3>
+                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
+                            <source src="../assets/videos/personal-projects/Grim/Grim_Animation_maya.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-grid-item">
+                        <h3>Unreal Animation</h3>
+                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
+                            <source src="../assets/videos/personal-projects/Grim/Grim_Animation_unrel.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

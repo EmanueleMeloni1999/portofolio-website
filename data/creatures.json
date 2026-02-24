@@ -3,120 +3,120 @@
         "asset": "Antelope",
         "status": "rigged",
         "artists": "Emanuele Meloni",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/antelope.png",
+        "rig": "../assets/images/personal-work/renders/antelope_rig.png",
         "link": "#"
     },
     {
         "asset": "Dolphin",
         "status": "rigged",
         "artists": "Emanuele Meloni",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/dolphin.png",
+        "rig": "../assets/images/personal-work/renders/dolphin_rig.png",
         "link": "#"
     },
     {
         "asset": "Elephant",
         "status": "rigged",
         "artists": "Emanuele Meloni",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/elephant.png",
+        "rig": "../assets/images/personal-work/renders/elephant_rig.png",
         "link": "#"
     },
     {
         "asset": "Fennec",
         "status": "supervised",
         "artists": "Chiara Sanasi",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/fennec.png",
+        "rig": "../assets/images/personal-work/renders/fennec_rig.png",
         "link": "#"
     },
     {
         "asset": "Hippo",
         "status": "supervised",
         "artists": "Gioachino Cassato, Matilde De Giuseppe",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/hippo.png",
+        "rig": "../assets/images/personal-work/renders/hippo_rig.png",
         "link": "#"
     },
     {
         "asset": "Komodo",
         "status": "rigged",
         "artists": "Emanuele Meloni, Valentin Procida",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/komodo.png",
+        "rig": "../assets/images/personal-work/renders/komodo_rig.png",
         "link": "#"
     },
     {
         "asset": "Moose",
         "status": "supervised",
         "artists": "Andrea Montagner",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/moose.png",
+        "rig": "../assets/images/personal-work/renders/moose_rig.png",
         "link": "#"
     },
     {
         "asset": "Mouse",
         "status": "rigged",
         "artists": "Emanuele Meloni, Leonardo Franci",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/mouse.png",
+        "rig": "../assets/images/personal-work/renders/mouse_rig.png",
         "link": "#"
     },
     {
         "asset": "Pig",
         "status": "supervised",
         "artists": "Matilde De Giuseppe",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/pig.png",
+        "rig": "../assets/images/personal-work/renders/pig_rig.png",
         "link": "#"
     },
     {
         "asset": "Rhino",
         "status": "supervised",
         "artists": "Chiara Sanasi",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/rhino.png",
+        "rig": "../assets/images/personal-work/renders/rhino_rig.png",
         "link": "#"
     },
     {
         "asset": "Sheep",
         "status": "supervised",
         "artists": "Andrea Montagner",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/sheep.png",
+        "rig": "../assets/images/personal-work/renders/sheep_rig.png",
         "link": "#"
     },
     {
         "asset": "Squirrel",
         "status": "supervised",
         "artists": "Gioachino Cassato",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/squirrel.png",
+        "rig": "../assets/images/personal-work/renders/squirrel_rig.png",
         "link": "#"
     },
     {
         "asset": "Tiger",
         "status": "rigged",
         "artists": "Emanuele Meloni, Valentin Procida",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/tiger.png",
+        "rig": "../assets/images/personal-work/renders/tiger_rig.png",
         "link": "#"
     },
     {
         "asset": "Wolf",
         "status": "supervised",
         "artists": "Leonardo Franci",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/wolf.png",
+        "rig": "../assets/images/personal-work/renders/wolf_rig.png",
         "link": "#"
     },
     {
         "asset": "Octopus",
         "status": "supervised",
         "artists": "Leonardo Franci",
-        "render": "../assets/images/personal-work/MoonshotCreatures.webp",
-        "rig": "../assets/images/personal-work/Drogon.webp",
+        "render": "../assets/images/personal-work/renders/octopus.png",
+        "rig": "../assets/images/personal-work/renders/octopus_rig.png",
         "link": "#"
     }
 ]

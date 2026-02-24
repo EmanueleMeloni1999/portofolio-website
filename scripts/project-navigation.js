@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 'drogon', title: 'Drogon' },
         { id: 'hiddenstudio', title: 'Alterego' },
         { id: 'chaosmonger', title: 'Italia 2162' },
-        { id: 'luminairi', title: 'Outpost Alpha' }
+        { id: 'luminairi', title: 'Outpost Alpha' },
+        { id: 'grim', title: 'Grim.exe Rig' }
     ];
 
     // Get current project ID from the page URL
