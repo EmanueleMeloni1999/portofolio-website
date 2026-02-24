@@ -1,60 +1,15 @@
 /* =====================================================
-   RESET
+   MAIN-SPECIFIC OVERRIDES (base in base.css)
 ===================================================== */
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #0f0f0f;
-    color: #eaeaea;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
 
 body.intro-active {
     overflow: hidden;
     height: 100vh;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* =====================================================
-   VARIABLES
-===================================================== */
-
 :root {
-    --bg-dark: #0f0f0f;
-    --bg-light: #171717;
-    --border: #2a2a2a;
-
-    --accent: #c2a36b;
-    --accent-soft: #e6d3b3;
-
     --highlight: rgb(234, 179, 8);
     --success: rgb(34, 197, 94);
-
-    --text-muted: #9a9a9a;
-    --text-titles: rgba(230, 225, 221, 1);
-
     --header-height: 70px;
 }
 
@@ -65,7 +20,7 @@ a {
 .intro-screen {
     position: fixed;
     inset: 0;
-    background: #0f0f0f;
+    background: #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,31 +35,17 @@ a {
 }
 
 .intro-content {
-    max-width: 90vw;
-    max-height: 90vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.intro-content img {
-    max-width: 100%;
-    max-height: 100%;
+.intro-content video {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-}
-
-@media (min-width: 768px) {
-    .intro-content {
-        max-width: 70vw;
-        max-height: 70vh;
-    }
-}
-
-@media (min-width: 1024px) {
-    .intro-content {
-        max-width: 60vw;
-        max-height: 80vh;
-    }
 }
 
 

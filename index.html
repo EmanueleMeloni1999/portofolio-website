@@ -3,32 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Emanuele Meloni - 3D Rigger, Pipeline TD e Technical Animator. Portfolio di progetti in produzione e rilasciati.">
- 
+    <meta name="description" content="Emanuele Meloni - 3D Rigger, Pipeline TD and Technical Animator. Portfolio of production and released projects.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Emanuele Meloni - Portfolio">
+    <meta property="og:description" content="3D Rigger, Pipeline TD and Technical Animator. Portfolio of production and released projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/profile/profile.webp">
+
     <title>Emanuele Meloni - Portfolio</title>
 
-    <link rel="preload" href="styles/main.css" as="style">
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.min.css">
+    <link rel="stylesheet" href="styles/main.min.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="assets/images/icons/logo.webp">
-
 </head>
 <body>
 
     <!-- INTRO ANIMATION -->
     <div id="intro-screen" class="intro-screen">
         <div class="intro-content">
-            <img id="intro-animation" src="assets/sprites/thumb_animated/thumb_reel000.png" alt="Intro Animation">
+            <video id="intro-video" muted playsinline preload="auto">
+                <source src="assets/videos/Intro.webm" type="video/webm">
+            </video>
         </div>
     </div>
 
     <!-- HEADER / NAVIGATION -->
     <header class="site-header">
         <div class="header-left">
-            <h1>Emanuele Meloni</h1>
-            <span>3D Rigger | Pipeline TD | Tech Animator</span>
+            <h1 id="site-name">Emanuele Meloni</h1>
+            <span id="site-title">3D Rigger | Pipeline TD | Tech Animator</span>
         </div>
         <nav class="header-right">
             <ul>
@@ -48,8 +55,8 @@
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
-            <h2>Emanuele Meloni</h2>
-            <p>3D Rigger · Pipeline TD · Technical Animator</p>
+            <h2 id="hero-name">Emanuele Meloni</h2>
+            <p id="hero-title">3D Rigger · Pipeline TD · Technical Animator</p>
             <div class="hero-buttons">
                 <a href="#showreel" class="btn btn-hero">
                     <img src="assets/images/icons/video.webp" alt="">
@@ -63,7 +70,7 @@
         </div>
 
         <!-- Una sola immagine per la tigre -->
-        <img id="hero-tiger" src="assets/sprites/tiger_head/head.0001.png" alt="Tiger Head" class="hero-tiger" loading="eager">>
+        <img id="hero-tiger" src="assets/sprites/tiger_head/head.0001.webp" alt="Tiger Head" class="hero-tiger" loading="eager">
     </section>
 
 
@@ -106,15 +113,15 @@
 
             <!-- RIGHT -->
             <div class="about-right">
-                <img src="assets/images/profile/profile.png" alt="Emanuele Meloni">
-                <span class="photo-caption">Emanuele Meloni · 2025</span>
+                <img src="assets/images/profile/profile.webp" alt="Emanuele Meloni" loading="lazy">
+                <span class="photo-caption" id="photo-caption">Emanuele Meloni · 2025</span>
             </div>
         </div>
 
         <!-- METRICS -->
         <div class="about-metrics">
             <div class="metric">
-                <span class="metric-number" data-target="4" data-suffix="+">
+                <span class="metric-number" id="metric-years" data-target="4" data-suffix="+">
                     <span class="metric-value">0</span><span class="metric-suffix">+</span>
                 </span>
                 <span class="metric-label">Years of Experience</span>
@@ -123,7 +130,7 @@
             <div class="metrics-divider"></div>
 
             <div class="metric">
-                <span class="metric-number" data-target="8" data-suffix="+">
+                <span class="metric-number" id="metric-projects" data-target="8" data-suffix="+">
                     <span class="metric-value">0</span><span class="metric-suffix">+</span>
                 </span>
                 <span class="metric-label">Projects</span>
@@ -132,15 +139,15 @@
 
         <!-- CTA BUTTONS -->
         <div class="cta-buttons">
-            <a href="assets/documents/CV.pdf" target="_blank" class="btn">
+            <a id="cv-link" href="assets/documents/CV.pdf" target="_blank" class="btn">
                 <img src="assets/images/icons/cv.webp" alt="">
                 Download CV
             </a>
-            <a href="https://www.linkedin.com/in/emanuelemeloni99/" target="_blank" class="btn">
+            <a id="linkedin-link" href="https://www.linkedin.com/in/emanuelemeloni99/" target="_blank" class="btn">
                 <img src="assets/images/icons/linkedin.webp" alt="">
                 LinkedIn
             </a>
-            <a href="https://www.imdb.com/it/name/nm14947573/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_emanuele%2520meloni" target="_blank" class="btn">
+            <a id="imdb-link" href="https://www.imdb.com/it/name/nm14947573/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_emanuele%2520meloni" target="_blank" class="btn">
                 <img src="assets/images/icons/imdb.webp" alt="">
                 IMDb
             </a>
@@ -169,15 +176,17 @@
         <div class="showreel-video-wrapper">
             <div class="showreel-video-container">
                 <iframe
+                    id="showreel-iframe"
                     src="https://www.youtube.com/embed/VIDEO_ID_HERE"
                     title="Emanuele Meloni - ShowReel"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
+                    allowfullscreen
+                    loading="lazy">
                 </iframe>
             </div>
         </div>
-        <p class="showreel-credits">
+        <p class="showreel-credits" id="showreel-credits">
             Credits, special thanks and additional info will go here.
         </p>
     </section>
@@ -236,17 +245,17 @@
         <div class="contact-cards">
             <div class="contact-card">
                 <span class="contact-card-label">
-                    <img src="assets/images/icons/email.webp" alt="">
+                    <img src="assets/images/icons/email.webp" alt="" loading="lazy">
                     Email
                 </span>
-                <a href="mailto:emanuele.meloni1999@gmail.com">emanuele.meloni1999@gmail.com</a>
+                <a id="contact-email" href="mailto:emanuele.meloni1999@gmail.com">emanuele.meloni1999@gmail.com</a>
             </div>
             <div class="contact-card">
                 <span class="contact-card-label">
-                    <img src="assets/images/icons/linkedin.webp" alt="">
+                    <img src="assets/images/icons/linkedin.webp" alt="" loading="lazy">
                     LinkedIn
                 </span>
-                <a href="https://www.linkedin.com/in/emanuelemeloni99/" target="_blank">linkedin.com/in/emanuelemeloni99</a>
+                <a id="contact-linkedin" href="https://www.linkedin.com/in/emanuelemeloni99/" target="_blank">linkedin.com/in/emanuelemeloni99</a>
             </div>
         </div>
 
@@ -261,7 +270,7 @@
                 <input type="text" name="subject" placeholder="Subject" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
                 <button type="submit" class="btn" id="contactSubmitBtn">
-                    <img src="assets/images/icons/sendmessage.webp" alt="">
+                    <img src="assets/images/icons/sendmessage.webp" alt="" loading="lazy">
                     <span>Send Message</span>
                 </button>
                 <p class="contact-feedback contact-success" id="contactSuccess">Message sent successfully!</p>
@@ -272,7 +281,7 @@
 
     <!-- FOOTER -->
     <footer class="site-footer">
-        <p>&copy; 2026 Emanuele Meloni. All rights reserved.</p>
+        <p id="footer-text">&copy; 2026 Emanuele Meloni. All rights reserved.</p>
     </footer>
 
     <!-- SCROLL TO TOP BUTTON -->
@@ -283,8 +292,8 @@
     </button>
 
     <!-- SCRIPT -->
-    <script src="scripts/main.js"></script>
-    <script src="scripts/interactions.js"></script>
+    <script src="scripts/main.min.js" defer></script>
+    <script src="scripts/interactions.min.js" defer></script>
 
 </body>
 </html>

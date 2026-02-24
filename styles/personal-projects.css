@@ -1,25 +1,8 @@
 /* =====================================================
-   RESET & BASE
+   PERSONAL-PROJECTS-SPECIFIC OVERRIDES (base in base.css)
 ===================================================== */
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #0f0f0f;
-    color: #eaeaea;
-    line-height: 1.6;
-    overflow-x: hidden;
     padding: 2rem 1.5rem 6rem;
 }
 
@@ -33,22 +16,6 @@ body {
     body {
         padding: 4rem 3rem 6rem;
     }
-}
-
-/* =====================================================
-   VARIABLES
-===================================================== */
-
-:root {
-    --bg-dark: #0f0f0f;
-    --bg-light: #171717;
-    --border: #2a2a2a;
-
-    --accent: #c2a36b;
-    --accent-soft: #e6d3b3;
-
-    --text-muted: #9a9a9a;
-    --text-titles: rgba(230, 225, 221, 1);
 }
 
 /* =====================================================

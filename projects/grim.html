@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Grim.exe Rig - A complete character rig from Unreal Engine asset by Emanuele Meloni">
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Grim.exe Rig - Emanuele Meloni">
+    <meta property="og:description" content="Grim.exe Rig - A complete character rig from Unreal Engine asset by Emanuele Meloni">
+    <meta property="og:type" content="website">
+
     <title>Grim.exe Rig - Emanuele Meloni</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="../assets/images/icons/logo.webp">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../styles/project-detail.css">
+    <link rel="stylesheet" href="../styles/base.min.css">
+    <link rel="stylesheet" href="../styles/project-detail.min.css">
 
     <!-- Navigation Script -->
-    <script src="../scripts/project-navigation.js"></script>
+    <script src="../scripts/project-navigation.min.js" defer></script>
 </head>
 <body>
 
@@ -47,7 +53,7 @@
         <section class="project-overview">
             <div class="overview-container">
                 <div class="overview-image">
-                    <img src="../assets/images/personal-work/Grim.png" alt="Grim.exe Rig">
+                    <img src="../assets/images/personal-work/Grim.webp" alt="Grim.exe Rig" loading="lazy">
                 </div>
                 <div class="overview-content">
                     <div class="project-meta project-meta-row">
@@ -83,20 +89,20 @@
                     <!-- Original Asset (Fab) -->
                     <div class="video-grid-item" style="text-align: center;">
                         <h3>Original Asset</h3>
-                        <div style="border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 1rem;">
-                            <img src="../assets/images/personal-work/Grim/Grim_Fab_preview.png" alt="Grim.exe on Fab" style="width: 100%; display: block;">
+                        <div class="media-card">
+                            <img src="../assets/images/personal-work/Grim/Grim_Fab_preview.webp" alt="Grim.exe on Fab" loading="lazy">
                         </div>
-                        <p style="color: var(--text-muted); font-size: clamp(0.85rem, 1.4vw, 0.95rem); margin-bottom: 1rem;">The base model was sourced from this Fab listing</p>
+                        <p class="media-caption">The base model was sourced from this Fab listing</p>
                         <a href="https://www.fab.com/listings/75578197-6f11-4839-8b9f-88009839e1eb" target="_blank" class="btn-purchase">View on Fab</a>
                     </div>
                     <!-- Download Rig (Gumroad) -->
                     <div class="video-grid-item" style="text-align: center;">
                         <h3>Download Rig</h3>
-                        <div style="border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 1rem;">
-                            <img src="../assets/images/personal-work/Grim/Grim_Fab_preview.png" alt="Grim.exe Rig Download" style="width: 100%; display: block;">
+                        <div class="media-card">
+                            <img src="../assets/images/personal-work/Grim/Grim_Fab_preview.webp" alt="Grim.exe Rig Download" loading="lazy">
                         </div>
-                        <p style="color: var(--text-muted); font-size: clamp(0.85rem, 1.4vw, 0.95rem); margin-bottom: 1rem;">Download the complete rig for free</p>
-                        <span class="btn-purchase" style="opacity: 0.5; pointer-events: none; cursor: default;">Coming Soon</span>
+                        <p class="media-caption">Download the complete rig for free</p>
+                        <span class="btn-purchase btn-disabled">Coming Soon</span>
                     </div>
                 </div>
             </div>
@@ -112,7 +118,7 @@
                 <!-- Old Model -->
                 <div class="tool-card-group tool-card-align-left">
                     <div class="tool-card-image">
-                        <img src="../assets/images/personal-work/Grim/Grim_Old_Model.png" alt="Original Unreal Export">
+                        <img src="../assets/images/personal-work/Grim/Grim_Old_Model.webp" alt="Original Unreal Export" loading="lazy">
                     </div>
                     <div class="tool-card-content">
                         <h3>Unreal Export</h3>
@@ -125,7 +131,7 @@
                 <!-- Clean Hierarchy -->
                 <div class="tool-card-group tool-card-align-right" style="grid-template-columns: 1fr 280px;">
                     <div class="tool-card-image">
-                        <img src="../assets/images/personal-work/Grim/Grim_Clean_Hierachy.png" alt="Clean Hierarchy">
+                        <img src="../assets/images/personal-work/Grim/Grim_Clean_Hierachy.webp" alt="Clean Hierarchy" loading="lazy">
                     </div>
                     <div class="tool-card-content">
                         <h3>Mesh Cleanup & Hierarchy</h3>
@@ -138,7 +144,7 @@
                 <!-- Proxy Meshes -->
                 <div class="tool-card-group tool-card-align-left">
                     <div class="tool-card-image">
-                        <img src="../assets/images/personal-work/Grim/Grim_Proxy_meshes.png" alt="Proxy Meshes">
+                        <img src="../assets/images/personal-work/Grim/Grim_Proxy_meshes.webp" alt="Proxy Meshes" loading="lazy">
                     </div>
                     <div class="tool-card-content">
                         <h3>Proxy Meshes</h3>
@@ -151,7 +157,7 @@
                 <!-- Model Check -->
                 <div class="tool-card-group tool-card-align-right">
                     <div class="tool-card-image">
-                        <img src="../assets/images/personal-work/Grim/Grim_Model_Check.png" alt="Model Check Tool">
+                        <img src="../assets/images/personal-work/Grim/Grim_Model_Check.webp" alt="Model Check Tool" loading="lazy">
                     </div>
                     <div class="tool-card-content">
                         <h3>Quality Control</h3>
@@ -171,7 +177,7 @@
                 <!-- Unreal Material -->
                 <div class="tool-card-group tool-card-align-left">
                     <div class="tool-card-image">
-                        <img src="../assets/images/personal-work/Grim/Grim_Material_Unreal_To_Extract.png" alt="Unreal Material Construction">
+                        <img src="../assets/images/personal-work/Grim/Grim_Material_Unreal_To_Extract.webp" alt="Unreal Material Construction" loading="lazy">
                     </div>
                     <div class="tool-card-content">
                         <h3>Unreal Shader Analysis</h3>
@@ -184,7 +190,7 @@
                 <!-- Exported Textures -->
                 <div class="tool-card-group tool-card-align-right">
                     <div class="tool-card-image">
-                        <img src="../assets/images/personal-work/Grim/Grim_Exported_Textures.png" alt="Exported Textures">
+                        <img src="../assets/images/personal-work/Grim/Grim_Exported_Textures.webp" alt="Exported Textures" loading="lazy">
                     </div>
                     <div class="tool-card-content">
                         <h3>Baked Textures</h3>
@@ -197,7 +203,7 @@
                 <!-- Materials Applied -->
                 <div class="tool-card-group tool-card-align-left">
                     <div class="tool-card-image">
-                        <img src="../assets/images/personal-work/Grim/Grim_Materials_Applied.png" alt="Materials Applied in Maya">
+                        <img src="../assets/images/personal-work/Grim/Grim_Materials_Applied.webp" alt="Materials Applied in Maya" loading="lazy">
                     </div>
                     <div class="tool-card-content">
                         <h3>Maya Preview</h3>
@@ -258,7 +264,7 @@
                 <!-- Guides -->
                 <div class="tool-card-group tool-card-align-left">
                     <div class="tool-card-image">
-                        <img src="../assets/images/personal-work/Grim/Grim_Guides.png" alt="mGear Guides">
+                        <img src="../assets/images/personal-work/Grim/Grim_Guides.webp" alt="mGear Guides" loading="lazy">
                     </div>
                     <div class="tool-card-content">
                         <h3>mGear Guides</h3>
@@ -271,7 +277,7 @@
                 <!-- Rig Overview -->
                 <div class="tool-card-group tool-card-align-right" style="grid-template-columns: 1fr 550px;">
                     <div class="tool-card-image">
-                        <img src="../assets/images/personal-work/Grim/Grim_Rig.png" alt="Grim Rig Overview">
+                        <img src="../assets/images/personal-work/Grim/Grim_Rig.webp" alt="Grim Rig Overview" loading="lazy">
                     </div>
                     <div class="tool-card-content">
                         <h3>Rig Overview</h3>
@@ -284,7 +290,7 @@
                 <!-- Picker -->
                 <div class="tool-card-group tool-card-align-left">
                     <div class="tool-card-image">
-                        <img src="../assets/images/personal-work/Grim/Grim_Picker.png" alt="Control Picker">
+                        <img src="../assets/images/personal-work/Grim/Grim_Picker.webp" alt="Control Picker" loading="lazy">
                     </div>
                     <div class="tool-card-content">
                         <h3>Control Picker</h3>
@@ -297,7 +303,7 @@
                 <!-- Skeletal Mesh -->
                 <div class="tool-card-group tool-card-align-right">
                     <div class="tool-card-image">
-                        <img src="../assets/images/personal-work/Grim/Grim_Skeletal_Mesh.png" alt="Skeletal Mesh Export">
+                        <img src="../assets/images/personal-work/Grim/Grim_Skeletal_Mesh.webp" alt="Skeletal Mesh Export" loading="lazy">
                     </div>
                     <div class="tool-card-content">
                         <h3>Skeletal Mesh</h3>
@@ -316,27 +322,27 @@
                 <div class="video-grid">
                     <div class="video-grid-item">
                         <h3>Chest Mechanism</h3>
-                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
-                            <source src="../assets/videos/personal-projects/Grim/Grim_Chest_Feature.mp4" type="video/mp4">
-                        </video>
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/HyIzxqPOhUk" title="Grim Chest Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
                     </div>
                     <div class="video-grid-item">
                         <h3>RBF Shoulder</h3>
-                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
-                            <source src="../assets/videos/personal-projects/Grim/Grim_rbf_feature.mp4" type="video/mp4">
-                        </video>
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/YHRUxVgeLCU" title="Grim RBF Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
                     </div>
                     <div class="video-grid-item">
                         <h3>Dynamic Wires</h3>
-                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
-                            <source src="../assets/videos/personal-projects/Grim/Grim_DynamicWire_Feature.mp4" type="video/mp4">
-                        </video>
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/devq3JBF64g" title="Grim DynamicWire Feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
                     </div>
                     <div class="video-grid-item">
                         <h3>Picker Example</h3>
-                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
-                            <source src="../assets/videos/personal-projects/Grim/Grim_Picker_Example.mp4" type="video/mp4">
-                        </video>
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/LwzC938G-v8" title="Grim Picker Example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -351,21 +357,21 @@
                 <div class="video-grid">
                     <div class="video-grid-item">
                         <h3>Rig Building</h3>
-                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
-                            <source src="../assets/videos/personal-projects/Grim/Grim_Building.mp4" type="video/mp4">
-                        </video>
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/OszwSscyft0" title="Grim Building" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
                     </div>
                     <div class="video-grid-item">
                         <h3>Maya Animation</h3>
-                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
-                            <source src="../assets/videos/personal-projects/Grim/Grim_Animation_maya.mp4" type="video/mp4">
-                        </video>
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/E0PHE4YyJqQ" title="Grim Animation Maya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
                     </div>
                     <div class="video-grid-item">
                         <h3>Unreal Animation</h3>
-                        <video width="100%" controls muted style="border-radius: 8px; border: 1px solid var(--border);">
-                            <source src="../assets/videos/personal-projects/Grim/Grim_Animation_unrel.mp4" type="video/mp4">
-                        </video>
+                        <div class="video-responsive">
+                            <iframe src="https://www.youtube.com/embed/we0Crj22HUA" title="Grim Animation Unreal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>

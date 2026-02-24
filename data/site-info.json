@@ -1,0 +1,19 @@
+{
+    "name": "Emanuele Meloni",
+    "title": "3D Rigger | Pipeline TD | Tech Animator",
+    "email": "emanuele.meloni1999@gmail.com",
+    "cv": "assets/documents/CV.pdf",
+    "social": {
+        "linkedin": "https://www.linkedin.com/in/emanuelemeloni99/",
+        "imdb": "https://www.imdb.com/it/name/nm14947573/?ref_=nv_sr_srsg_0_tt_0_nm_8_in_0_q_emanuele%2520meloni"
+    },
+    "metrics": {
+        "years": 4,
+        "projects": 8
+    },
+    "youtube": {
+        "link": "https://www.youtube.com/embed/VIDEO_ID_HERE",
+        "description": "COMING SOON"
+    },
+    "footer": "2026 Emanuele Meloni. All rights reserved."
+}

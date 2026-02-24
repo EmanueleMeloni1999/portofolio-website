@@ -1,52 +1,106 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     // ========================================
-    // INTRO ANIMATION
+    // SITE INFO (from JSON)
+    // ========================================
+    fetch("data/site-info.json")
+        .then(response => response.json())
+        .then(info => {
+            // Header
+            const siteName = document.getElementById("site-name");
+            if (siteName) siteName.textContent = info.name;
+
+            const siteTitle = document.getElementById("site-title");
+            if (siteTitle) siteTitle.textContent = info.title;
+
+            // Hero
+            const heroName = document.getElementById("hero-name");
+            if (heroName) heroName.textContent = info.name;
+
+            const heroTitle = document.getElementById("hero-title");
+            if (heroTitle) heroTitle.textContent = info.title.replace(/\s*\|\s*/g, " \u00b7 ");
+
+            // Photo caption
+            const caption = document.getElementById("photo-caption");
+            if (caption) caption.textContent = info.name + " \u00b7 " + new Date().getFullYear();
+
+            // Metrics
+            const metricYears = document.getElementById("metric-years");
+            if (metricYears) metricYears.setAttribute("data-target", info.metrics.years);
+
+            const metricProjects = document.getElementById("metric-projects");
+            if (metricProjects) metricProjects.setAttribute("data-target", info.metrics.projects);
+
+            // CTA links
+            const cvLink = document.getElementById("cv-link");
+            if (cvLink) cvLink.href = info.cv;
+
+            const linkedinLink = document.getElementById("linkedin-link");
+            if (linkedinLink) linkedinLink.href = info.social.linkedin;
+
+            const imdbLink = document.getElementById("imdb-link");
+            if (imdbLink) imdbLink.href = info.social.imdb;
+
+            // ShowReel
+            const showreelIframe = document.getElementById("showreel-iframe");
+            if (showreelIframe) showreelIframe.src = info.youtube.link;
+
+            const showreelCredits = document.getElementById("showreel-credits");
+            if (showreelCredits) showreelCredits.textContent = info.youtube.description;
+
+            // Contact
+            const contactEmail = document.getElementById("contact-email");
+            if (contactEmail) {
+                contactEmail.href = "mailto:" + info.email;
+                contactEmail.textContent = info.email;
+            }
+
+            const contactLinkedin = document.getElementById("contact-linkedin");
+            if (contactLinkedin) {
+                contactLinkedin.href = info.social.linkedin;
+                contactLinkedin.textContent = info.social.linkedin
+                    .replace("https://www.", "")
+                    .replace(/\/$/, "");
+            }
+
+            // Footer
+            const footerText = document.getElementById("footer-text");
+            if (footerText) footerText.innerHTML = "&copy; " + info.footer;
+        })
+        .catch(error => console.error("Site info loading error:", error));
+
+
+    // ========================================
+    // INTRO ANIMATION (WebM video)
     // ========================================
     const introScreen = document.getElementById('intro-screen');
-    const introImg = document.getElementById('intro-animation');
+    const introVideo = document.getElementById('intro-video');
 
-    if (introScreen && introImg) {
-        console.log('Intro elements found, starting animation...');
-        // Block scrolling during intro
+    if (introScreen && introVideo) {
         document.body.classList.add('intro-active');
+        let introSkipped = false;
 
-        let currentFrame = 0;
-        const totalFrames = 120; // thumb_reel000 to thumb_reel119
-        const fps = 30; // 30 frames per second
-        const frameInterval = 1000 / fps; // milliseconds per frame
-
-        // Preload frames for smoother playback
-        const frames = [];
-        for (let i = 0; i < totalFrames; i++) {
-            const img = new Image();
-            img.src = `assets/sprites/thumb_animated/thumb_reel${String(i).padStart(3, '0')}.png`;
-            frames.push(img);
+        function endIntro() {
+            if (introSkipped) return;
+            introSkipped = true;
+            introVideo.pause();
+            introScreen.classList.add('fade-out');
+            setTimeout(() => {
+                introScreen.style.display = 'none';
+                document.body.classList.remove('intro-active');
+            }, 800);
         }
-        console.log(`Preloading ${totalFrames} frames...`);
 
-        // Play animation
-        const animationInterval = setInterval(() => {
-            currentFrame++;
-            if (currentFrame < totalFrames) {
-                introImg.src = frames[currentFrame].src;
-            } else {
-                // Animation complete - fade out
-                console.log('Animation complete, fading out...');
-                clearInterval(animationInterval);
-                setTimeout(() => {
-                    introScreen.classList.add('fade-out');
-                    setTimeout(() => {
-                        introScreen.style.display = 'none';
-                        // Re-enable scrolling after intro
-                        document.body.classList.remove('intro-active');
-                        console.log('Intro finished');
-                    }, 800); // Match CSS transition duration
-                }, 300); // Small delay before fade
-            }
-        }, frameInterval);
-    } else {
-        console.error('Intro elements not found:', { introScreen, introImg });
+        introScreen.addEventListener('click', endIntro);
+        introScreen.addEventListener('touchstart', endIntro, { passive: true });
+
+        introVideo.addEventListener('ended', () => {
+            setTimeout(endIntro, 300);
+        });
+
+        introVideo.play().catch(() => {
+            endIntro();
+        });
     }
 
     // ========================================

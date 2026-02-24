@@ -13,7 +13,7 @@ const tigerFrames = [];
 for (let i = 1; i <= totalFrames; i++) {
     const frameStr = i.toString().padStart(4, "0");
     const img = new Image();
-    img.src = `assets/sprites/tiger_head/head.${frameStr}.png`;
+    img.src = `assets/sprites/tiger_head/head.${frameStr}.webp`;
     tigerFrames.push(img);
 }
 
@@ -34,9 +34,4 @@ document.addEventListener("mousemove", (e) => {
     frameIndex = Math.max(0, Math.min(totalFrames-1, frameIndex));
 
     tiger.src = tigerFrames[frameIndex].src;
-});
-
-
-card.addEventListener("click", () => {
-    window.open(project.link, "_blank");
 });

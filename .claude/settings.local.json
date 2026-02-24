@@ -5,7 +5,18 @@
       "Bash(findstr:*)",
       "Bash(python:*)",
       "Bash(pip install:*)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "Bash(wc:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(git rm:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(du:*)",
+      "Bash(node:*)",
+      "Bash(npm --version)",
+      "Bash(npx:*)",
+      "Bash(npx --yes clean-css-cli:*)"
     ]
   }
 }

@@ -1,6 +1,8 @@
 # OS Files
 .DS_Store
 Thumbs.db
+desktop.ini
+nul
 
 # IDE
 .vscode/
@@ -11,3 +13,9 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.log
+
+# Source/Design files
+*.psd
+
+# Claude worktrees
+.claude/worktrees/

@@ -1,42 +1,4 @@
-/* =====================================================
-   RESET & BASE
-===================================================== */
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #0f0f0f;
-    color: #eaeaea;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* =====================================================
-   VARIABLES
-===================================================== */
-
-:root {
-    --bg-dark: #0f0f0f;
-    --bg-light: #171717;
-    --border: #2a2a2a;
-
-    --accent: #c2a36b;
-    --accent-soft: #e6d3b3;
-
-    --text-muted: #9a9a9a;
-    --text-titles: rgba(230, 225, 221, 1);
-}
+/* Base reset and variables are in base.css */
 
 /* =====================================================
    NAVIGATION
@@ -774,10 +736,10 @@ body {
 
 .creature-slider img {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
     object-fit: cover;
     display: block;
     user-select: none;
@@ -1008,5 +970,215 @@ body {
         bottom: 1.5rem;
         right: 1.5rem;
         font-size: 0.85rem;
+    }
+}
+
+/* =====================================================
+   UTILITY CLASSES
+===================================================== */
+
+.video-bordered {
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    width: 100%;
+    display: block;
+}
+
+.media-card {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    margin-bottom: 1rem;
+}
+
+.media-caption {
+    color: var(--text-muted);
+    font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+    margin-bottom: 1rem;
+}
+
+.link-accent {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.btn-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+}
+
+/* =====================================================
+   CREATURE LIGHTBOX
+===================================================== */
+
+.creature-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    cursor: zoom-out;
+}
+
+.creature-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.creature-lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+    cursor: default;
+}
+
+.creature-lightbox-content img {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.creature-lightbox-content .creature-img-render {
+    display: block;
+}
+
+.creature-lightbox-content .creature-img-rig {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    clip-path: inset(0 50% 0 0);
+    z-index: 2;
+}
+
+.creature-lightbox .creature-slider-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    z-index: 5;
+    transform: translateX(-50%);
+}
+
+.creature-lightbox .creature-slider-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 1);
+    pointer-events: none;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.creature-lightbox .creature-slider-handle::before {
+    content: '\25C2 \25B8';
+    font-size: 12px;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.creature-lightbox input[type="range"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 10;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.creature-lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.creature-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.creature-lightbox-title {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.creature-expand-btn {
+    position: absolute;
+    bottom: 0.6rem;
+    right: 0.6rem;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 15;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cpolyline points='9 21 3 21 3 15'/%3E%3Cline x1='21' y1='3' x2='14' y2='10'/%3E%3Cline x1='3' y1='21' x2='10' y2='14'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.creature-expand-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+    .creature-lightbox-content {
+        width: 95vw;
+    }
+
+    .creature-lightbox-close {
+        top: 1rem;
+        right: 1rem;
     }
 }
