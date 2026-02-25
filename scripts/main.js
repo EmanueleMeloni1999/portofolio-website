@@ -45,9 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const showreelIframe = document.getElementById("showreel-iframe");
             if (showreelIframe) showreelIframe.src = info.youtube.link;
 
-            const showreelCredits = document.getElementById("showreel-credits");
-            if (showreelCredits) showreelCredits.textContent = info.youtube.description;
-
             // Contact
             const contactEmail = document.getElementById("contact-email");
             if (contactEmail) {

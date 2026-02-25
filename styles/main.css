@@ -1590,12 +1590,31 @@ section {
 .showreel-section {
     max-width: 1200px;
     margin: 0 auto;
+    text-align: left;
+}
+
+.showreel-section h2 {
     text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Outer: vertical stack (top row + credits) */
+.showreel-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* TOP ROW: video (left) + text (right) */
+.showreel-top {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
 }
 
 .showreel-video-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
+    flex: 1 1 60%;
+    min-width: 0;
 }
 
 .showreel-video-container {
@@ -1617,12 +1636,148 @@ section {
     border: none;
 }
 
-.showreel-credits {
-    margin-top: 1.5rem;
-    font-size: clamp(0.85rem, 1.5vw, 0.9rem);
+/* RIGHT: intro + special thanks */
+.showreel-right {
+    flex: 1 1 36%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.showreel-intro {
+    font-size: clamp(0.85rem, 1.4vw, 0.95rem);
     color: var(--text-muted);
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.showreel-thanks {
+    font-size: clamp(0.78rem, 1.2vw, 0.85rem);
+    color: var(--text-muted);
+    line-height: 1.7;
+    border-top: 1px solid var(--border);
+    padding-top: 1.25rem;
+    margin: 0;
+    font-style: italic;
+}
+
+.showreel-thanks strong {
+    color: var(--text-primary);
+    font-style: normal;
+}
+
+/* Credits grid: below the top row, independent cell heights */
+.showreel-credits-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    align-items: start; /* fix: ogni cella cresce indipendentemente */
+}
+
+/* Accordion card (details element) */
+.showreel-credit-block {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-left: 2px solid var(--accent);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.25s ease;
+}
+
+.showreel-credit-block[open] {
+    border-color: var(--accent);
+}
+
+/* Summary row (clickable title) */
+.showreel-credit-block summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0.9rem;
+    cursor: pointer;
+    user-select: none;
+    gap: 0.5rem;
+}
+
+.showreel-credit-block summary::-webkit-details-marker {
+    display: none;
+}
+
+.showreel-credit-block summary h3 {
+    font-size: clamp(0.68rem, 1.05vw, 0.75rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin: 0;
+    flex: 1;
+}
+
+/* +/− toggle indicator */
+.showreel-credit-block summary::after {
+    content: '+';
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.showreel-credit-block[open] summary::after {
+    content: '−';
+}
+
+/* Expanded list */
+.showreel-credit-block ul {
+    list-style: none;
+    padding: 0.5rem 0.9rem 0.75rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    border-top: 1px solid var(--border);
+}
+
+.showreel-credit-block ul li {
+    font-size: clamp(0.68rem, 1vw, 0.76rem);
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.showreel-credit-block ul li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .showreel-top {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .showreel-video-wrapper,
+    .showreel-right {
+        flex: none;
+        width: 100%;
+    }
+
+    .showreel-credits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .showreel-credits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .showreel-credits-grid {
+        grid-template-columns: 1fr;
+    }
 }
