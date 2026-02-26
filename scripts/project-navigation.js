@@ -22,28 +22,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (currentIndex === -1) return; // Project not found
 
-    // Get navigation elements
-    const navLeft = document.querySelector('.nav-left');
-    const navRight = document.querySelector('.nav-right');
+    // Get navigation center container
+    const navCenter = document.querySelector('.nav-center');
+    if (!navCenter) return;
 
-    // Add Previous Project link (if not first)
+    // Get the All Projects link (already in the HTML)
+    const allProjectsLink = navCenter.querySelector('.nav-link');
+
+    // Add Previous Project link before All Projects
     if (currentIndex > 0) {
         const prevProject = projects[currentIndex - 1];
         const prevLink = document.createElement('a');
         prevLink.href = `${prevProject.id}.html`;
         prevLink.classList.add('nav-link');
-        prevLink.innerHTML = `← Previous`;
-        navLeft.appendChild(prevLink);
+        prevLink.innerHTML = `\u2190 Previous`;
+        navCenter.insertBefore(prevLink, allProjectsLink);
     }
 
-    // Add Next Project link (if not last)
+    // Add Next Project link after All Projects
     if (currentIndex < projects.length - 1) {
         const nextProject = projects[currentIndex + 1];
         const nextLink = document.createElement('a');
         nextLink.href = `${nextProject.id}.html`;
         nextLink.classList.add('nav-link');
-        nextLink.innerHTML = `Next →`;
-        navRight.appendChild(nextLink);
+        nextLink.innerHTML = `Next \u2192`;
+        navCenter.appendChild(nextLink);
     }
 
 });
