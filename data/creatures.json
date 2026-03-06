@@ -5,7 +5,7 @@
         "artists": "Emanuele Meloni",
         "render": "../assets/images/personal-work/renders/antelope.webp",
         "rig": "../assets/images/personal-work/renders/antelope_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/antelope"
     },
     {
         "asset": "Dolphin",
@@ -13,7 +13,7 @@
         "artists": "Emanuele Meloni",
         "render": "../assets/images/personal-work/renders/dolphin.webp",
         "rig": "../assets/images/personal-work/renders/dolphin_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/dolphin"
     },
     {
         "asset": "Elephant",
@@ -21,7 +21,7 @@
         "artists": "Emanuele Meloni",
         "render": "../assets/images/personal-work/renders/elephant.webp",
         "rig": "../assets/images/personal-work/renders/elephant_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/african-elephant"
     },
     {
         "asset": "Fennec",
@@ -29,7 +29,7 @@
         "artists": "Chiara Sanasi",
         "render": "../assets/images/personal-work/renders/fennec.webp",
         "rig": "../assets/images/personal-work/renders/fennec_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/fennec-fox"
     },
     {
         "asset": "Hippo",
@@ -37,7 +37,7 @@
         "artists": "Gioachino Cassato, Matilde De Giuseppe",
         "render": "../assets/images/personal-work/renders/hippo.webp",
         "rig": "../assets/images/personal-work/renders/hippo_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/hippopotamus"
     },
     {
         "asset": "Komodo",
@@ -45,7 +45,7 @@
         "artists": "Emanuele Meloni, Valentin Procida",
         "render": "../assets/images/personal-work/renders/komodo.webp",
         "rig": "../assets/images/personal-work/renders/komodo_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/komodo-dragon"
     },
     {
         "asset": "Moose",
@@ -53,7 +53,7 @@
         "artists": "Andrea Montagner",
         "render": "../assets/images/personal-work/renders/moose.webp",
         "rig": "../assets/images/personal-work/renders/moose_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/moose"
     },
     {
         "asset": "Mouse",
@@ -61,7 +61,7 @@
         "artists": "Emanuele Meloni, Leonardo Franci",
         "render": "../assets/images/personal-work/renders/mouse.webp",
         "rig": "../assets/images/personal-work/renders/mouse_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/common-mouse"
     },
     {
         "asset": "Pig",
@@ -69,7 +69,7 @@
         "artists": "Matilde De Giuseppe",
         "render": "../assets/images/personal-work/renders/pig.webp",
         "rig": "../assets/images/personal-work/renders/pig_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/pig"
     },
     {
         "asset": "Rhino",
@@ -77,7 +77,7 @@
         "artists": "Chiara Sanasi",
         "render": "../assets/images/personal-work/renders/rhino.webp",
         "rig": "../assets/images/personal-work/renders/rhino_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/white-rhino"
     },
     {
         "asset": "Sheep",
@@ -85,7 +85,7 @@
         "artists": "Andrea Montagner",
         "render": "../assets/images/personal-work/renders/sheep.webp",
         "rig": "../assets/images/personal-work/renders/sheep_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/sheep"
     },
     {
         "asset": "Squirrel",
@@ -93,7 +93,7 @@
         "artists": "Gioachino Cassato",
         "render": "../assets/images/personal-work/renders/squirrel.webp",
         "rig": "../assets/images/personal-work/renders/squirrel_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/grey-squirrel"
     },
     {
         "asset": "Tiger",
@@ -101,7 +101,7 @@
         "artists": "Emanuele Meloni, Valentin Procida",
         "render": "../assets/images/personal-work/renders/tiger.webp",
         "rig": "../assets/images/personal-work/renders/tiger_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/tiger"
     },
     {
         "asset": "Wolf",
@@ -109,7 +109,7 @@
         "artists": "Leonardo Franci",
         "render": "../assets/images/personal-work/renders/wolf.webp",
         "rig": "../assets/images/personal-work/renders/wolf_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/grey-wolf"
     },
     {
         "asset": "Octopus",
@@ -117,6 +117,6 @@
         "artists": "Leonardo Franci",
         "render": "../assets/images/personal-work/renders/octopus.webp",
         "rig": "../assets/images/personal-work/renders/octopus_rig.webp",
-        "link": "#"
+        "link": "https://shop.moonshotcgi.com/en-eu/collections/modelli-3d/products/octopus"
     }
 ]
