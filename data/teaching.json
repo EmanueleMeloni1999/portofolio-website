@@ -1,19 +1,19 @@
 [
     {
-        "title": "Accademia Italiana Videogiochi",
-        "period": "March 2025 - Present",
-        "location": "Rome, Italy",
-        "image": "assets/images/teaching/AIV.webp",
-        "link" : "https://www.aiv01.it/",
-        "role": "Creature Rigging Professor"
-    },
-    {
         "title": "Istituto Europeo di Design",
         "period": "October 2023 - Present",
         "location": "Rome, Italy",
         "image": "assets/images/teaching/IED.webp",
         "link" : "https://www.ied.it/",
         "role": "Character Rigging Professor"
+    },
+    {
+        "title": "Accademia Italiana Videogiochi",
+        "period": "March 2025 - March 2026",
+        "location": "Rome, Italy",
+        "image": "assets/images/teaching/AIV.webp",
+        "link" : "https://www.aiv01.it/",
+        "role": "Creature Rigging Professor"
     },
     {
         "title": "TheSign - Comics & Arts Academy",

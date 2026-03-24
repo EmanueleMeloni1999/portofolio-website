@@ -17,7 +17,10 @@
       "Bash(npm --version)",
       "Bash(npx:*)",
       "Bash(npx --yes clean-css-cli:*)",
-      "Bash(git mv:*)"
+      "Bash(git mv:*)",
+      "Bash(where npx)",
+      "Bash(where node)",
+      "Bash(where python)"
     ]
   }
 }

@@ -115,30 +115,42 @@ document.addEventListener("DOMContentLoaded", function() {
     const headerNav = document.querySelector('.header-right');
     
     if (header && headerNav) {
-        header.insertBefore(menuToggle, headerNav);
-        
+        header.appendChild(menuToggle);
+
+        function openMenu() {
+            menuToggle.classList.add('active');
+            headerNav.classList.add('active');
+            if (window.innerWidth < 768) {
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            headerNav.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
         menuToggle.addEventListener('click', function() {
-            menuToggle.classList.toggle('active');
-            headerNav.classList.toggle('active');
-            document.body.style.overflow = headerNav.classList.contains('active') ? 'hidden' : '';
+            if (!headerNav.classList.contains('active')) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
         });
-        
+
         // Close menu when clicking on a link
         const navLinks = headerNav.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                menuToggle.classList.remove('active');
-                headerNav.classList.remove('active');
-                document.body.style.overflow = '';
+                closeMenu();
             });
         });
-        
+
         // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!header.contains(e.target) && headerNav.classList.contains('active')) {
-                menuToggle.classList.remove('active');
-                headerNav.classList.remove('active');
-                document.body.style.overflow = '';
+                closeMenu();
             }
         });
     }
@@ -259,6 +271,7 @@ document.addEventListener("DOMContentLoaded", function() {
             career.forEach(c => {
                 const card = document.createElement('div');
                 card.classList.add('career-card');
+                const isCurrent = c.period.toLowerCase().includes('present');
                 card.innerHTML = `
                     ${c.logo ? `<img src="${c.logo}" alt="${c.studio}" loading="lazy">` : ''}
                     <h3>${c.studio}</h3>
@@ -267,6 +280,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <span class="career-period">${c.period}</span>
                         ${c.kind ? `<span class="career-kind">${c.kind}</span>` : ''}
                     </div>
+                    ${isCurrent ? '<span class="current-badge"><span class="current-dot"></span>Current</span>' : ''}
                 `;
 
                 if (c.link) {
@@ -294,6 +308,7 @@ document.addEventListener("DOMContentLoaded", function() {
             teaching.forEach(t => {
                 const card = document.createElement("div");
                 card.classList.add("teaching-card");
+                const isCurrent = t.period.toLowerCase().includes('present');
 
                 card.innerHTML = `
                     ${t.image ? `<img src="${t.image}" alt="${t.title}" loading="lazy">` : ''}
@@ -303,6 +318,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <span class="teaching-period">${t.period}</span>
                         ${t.location ? `<span class="teaching-location">${t.location}</span>` : ''}
                     </div>
+                    ${isCurrent ? '<span class="current-badge"><span class="current-dot"></span>Current</span>' : ''}
                 `;
 
                 // Click to open link
@@ -550,5 +566,89 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     }
+
+
+    // ========================================
+    // MOBILE CAROUSELS (auto-scroll + dots)
+    // ========================================
+    function initMobileCarousels() {
+        if (window.innerWidth >= 768) return;
+
+        const grids = document.querySelectorAll('.projects-grid, .career-grid, .teaching-grid, .personal-work-grid');
+
+        grids.forEach(function(grid) {
+            const cards = grid.children;
+            if (cards.length < 2) return;
+
+            // Create dot indicators
+            const dotsContainer = document.createElement('div');
+            dotsContainer.classList.add('carousel-dots');
+
+            for (let i = 0; i < cards.length; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', function() {
+                    const cardWidth = cards[0].offsetWidth + 16;
+                    grid.scrollTo({ left: cardWidth * i, behavior: 'smooth' });
+                });
+                dotsContainer.appendChild(dot);
+            }
+
+            grid.parentNode.insertBefore(dotsContainer, grid.nextSibling);
+
+            // Update dots on scroll
+            let scrollTimeout;
+            grid.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(function() {
+                    const cardWidth = cards[0].offsetWidth + 16;
+                    const activeIndex = Math.round(grid.scrollLeft / cardWidth);
+                    const dots = dotsContainer.querySelectorAll('.dot');
+                    dots.forEach(function(d, idx) {
+                        d.classList.toggle('active', idx === activeIndex);
+                    });
+                }, 50);
+            });
+
+            // Auto-scroll
+            let autoScrollInterval;
+            let userInteracted = false;
+            let resumeTimeout;
+
+            function startAutoScroll() {
+                autoScrollInterval = setInterval(function() {
+                    if (userInteracted) return;
+                    const cardWidth = cards[0].offsetWidth + 16;
+                    const maxScroll = grid.scrollWidth - grid.clientWidth;
+                    if (grid.scrollLeft >= maxScroll - 10) {
+                        grid.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        grid.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                    }
+                }, 4000);
+            }
+
+            function pauseAutoScroll() {
+                userInteracted = true;
+                clearTimeout(resumeTimeout);
+                resumeTimeout = setTimeout(function() {
+                    userInteracted = false;
+                }, 8000);
+            }
+
+            grid.addEventListener('touchstart', pauseAutoScroll, { passive: true });
+            grid.addEventListener('mousedown', pauseAutoScroll);
+
+            startAutoScroll();
+
+            // Store interval for cleanup
+            grid._autoScrollInterval = autoScrollInterval;
+            grid._dotsContainer = dotsContainer;
+        });
+    }
+
+    // Wait for all data to load, then init carousels
+    setTimeout(initMobileCarousels, 1500);
 
 });
