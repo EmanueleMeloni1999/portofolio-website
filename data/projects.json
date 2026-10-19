@@ -1,12 +1,34 @@
 [
     {
+        "title": "Ghostbusters: Night Shift",
+        "role": "Senior Rigging TD",
+        "studio": "Flying Bark",
+        "image": "assets/images/projects/Poster_GhostBuster.webp",
+        "video": false,
+        "description": "Rigged secondary characters and props",
+        "status": "In Production",
+        "link": "https://www.flyingbark.com.au/coming-soon/ghostbusters-night-shift",
+        "kind": "Animation Serie"
+    },
+    {
+        "title": "World of Tanks Blitz",
+        "role": "Senior Rigging TD",
+        "studio": "Rabbit Games",
+        "image": "assets/images/projects/Poster_WoTB.webp",
+        "video": "assets/videos/WoTB.mp4",
+        "description": "Rigged tanks, skins, cinematic assets and props; engine implementation",
+        "status": "Released & Updating",
+        "link": "https://na.wotblitz.com/en/",
+        "kind": "Video Game"
+    },
+    {
         "title": "Forest",
         "role": "Rigging TD - Pipeline TD",
         "studio": "Al-one s.r.l",
         "image": "assets/images/projects/Poster_Forest.webp",
         "video": "assets/videos/Forest.mp4",
         "description": "Rigged main characters; developed full-pipeline workflows and tools for all departments",
-        "status": "In Production",
+        "status": "Blocked",
         "link": "https://www.instagram.com/reel/CzySygpoQHk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
         "kind": "Animation Feature Film"
     },
@@ -17,7 +39,7 @@
         "image": "assets/images/projects/Poster_Trash.webp",
         "video": "assets/videos/Trash.mp4",
         "description": "Maya/Unreal Rigging and Cinematic Integration for gameplay",
-        "status": "In Production",
+        "status": "Blocked",
         "link": "https://www.youtube.com/watch?v=3jeKiYQX48c&t=39s",
         "kind": "Video Game"
     },
@@ -50,7 +72,7 @@
         "image": "assets/images/projects/Poster_MissionGranny.webp",
         "video": false,
         "description": "Character and Prop rigging for a commercial trailer",
-        "status": "In Production",
+        "status": "Blocked",
         "link": "https://arxanima.com/features-and-series/op-oma",
         "kind": "Animation Feature Film"
     },

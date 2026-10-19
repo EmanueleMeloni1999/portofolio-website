@@ -1,11 +1,27 @@
 [
     {
+        "studio": "RedRaion",
+        "role": "Rigging TD",
+        "period": "October 2026 - Present",
+        "logo": "assets/images/studios/RedRaion.webp",
+        "link" : "https://www.redraion.com/",
+        "kind" : "Freelance: Remote"
+    },
+    {
+        "studio": "Flying Bark",
+        "role": "Senior 3D Rigger",
+        "period": "August 2026 - Present",
+        "logo": "assets/images/studios/FB.webp",
+        "link" : "https://www.flyingbark.com.au/",
+        "kind" : "Freelance: Remote"
+    },
+    {
         "studio": "Rabbit Games",
         "role": "Senior 3D Rigger",
-        "period": "April 2026 - July 2026",
+        "period": "April 2026 - Present",
         "logo": "assets/images/studios/rabbit.webp",
         "link" : "https://rabbitgames.com/",
-        "kind" : "FullTime: Remote"
+        "kind" : "Freelance: Remote"
     },
     {
         "studio": "Moonshot CGI",

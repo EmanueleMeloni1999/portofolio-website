@@ -208,6 +208,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else if (project.status.toLowerCase().includes('released')) {
                     statusClass = 'status-released';
                     statusDot = '<span class="status-dot status-released"></span>';
+                } else if (project.status.toLowerCase().includes('blocked')) {
+                    statusClass = 'status-blocked';
+                    statusDot = '<span class="status-dot status-blocked"></span>';
                 }
 
                 card.innerHTML = `
